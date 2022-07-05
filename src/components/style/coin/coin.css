@@ -1,17 +1,9 @@
-body {
-  background-color: #22272e;
-}
-
 .red {
   color: #ff0000;
 }
 
 .green {
   color: #00ff00;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 .coin-volume {
@@ -24,29 +16,6 @@ body {
 
 .coin-market-cap {
   width: 200px;
-}
-
-.cursor-crosshair {
-  cursor: crosshair;
-}
-
-h1, h3, p {
-  font-family: consolas;
-  color: #dcddde;
-}
-
-html {
-  cursor: crosshair;
-  font-family: consolas;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 10px;
-  padding: 0;
-  font-family: consolas;
-  background-color: #22272e;
-  color: #dcddde;
 }
 
 .coin-search {
@@ -131,4 +100,15 @@ html {
   transition: font-size 1s, color 0.5s, background-color 0.5s;
 }
 
-/*# sourceMappingURL=test.css.map */
+.treasury--display {
+  width: 150vh;
+  height: 1335px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=coin.css.map */

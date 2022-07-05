@@ -1,4 +1,3 @@
-$font-stack: consolas;
 $primary-color: #dcddde;
 $secondary-color: #22272e;
 $crypto-positive-color: #00ff00;
@@ -12,30 +11,11 @@ $align: center;
 $transtion-1s: 1s;
 $transition-05s: 0.5s;
 
-body { background-color: $secondary-color; }
 .red { color: $crypto-negative-color; }
 .green { color: $crypto-positive-color; }
-::-webkit-scrollbar { display: none; }
 .coin-volume { width: $width-200px; }
 .coin-input::placeholder { color: $primary-color; }
 .coin-market-cap { width: $width-200px; }
-.cursor-crosshair { cursor: $cursor-crosshair; }
-h1, h3, p {
-  font-family: $font-stack;
-  color: $primary-color;
-}
-html {
-    cursor: $cursor-crosshair;
-    font-family: $font-stack;
-}
-* {
-    box-sizing: border-box;
-    margin: $size-10px;
-    padding: 0;
-    font-family: $font-stack;
-    background-color: $secondary-color;
-    color: $primary-color;
-}
 .coin-search {
     margin-bottom: $size-10px;
     display: flex;
@@ -107,4 +87,14 @@ html {
   color: $primary-color;
   background-color: $secondary-color;
   transition: font-size $transtion-1s, color $transition-05s, background-color $transition-05s;
+}
+.treasury--display {
+    width: 150vh;
+    height: 1335px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: $align;
+    align-items: $align;
+    border-radius: $border-radius-5px;
 }

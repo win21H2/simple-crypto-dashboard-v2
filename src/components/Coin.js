@@ -1,6 +1,7 @@
 import React from "react";
 
 const Coin = ({ image, symbol, price, volume, priceChange, high24h, low24h, lastupdated }) => {
+  
   return (
     <>
     <div id="CRYPTO--CURRENT">
@@ -20,9 +21,6 @@ const Coin = ({ image, symbol, price, volume, priceChange, high24h, low24h, last
           </div>
         </div>
       </div>
-    </div>
-    <div id="CRYPTO--CALC">
-    
     </div>
     </>
   );

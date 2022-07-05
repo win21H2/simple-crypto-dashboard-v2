@@ -1,0 +1,32 @@
+body {
+  background-color: #22272e;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.cursor-crosshair {
+  cursor: crosshair;
+}
+
+h1, h3, p {
+  font-family: consolas;
+  color: #dcddde;
+}
+
+html {
+  cursor: crosshair;
+  font-family: consolas;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 0;
+  font-family: consolas;
+  background-color: #22272e;
+  color: #dcddde;
+}
+
+/*# sourceMappingURL=main.css.map */
