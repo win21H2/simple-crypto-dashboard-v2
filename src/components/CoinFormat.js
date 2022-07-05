@@ -22,7 +22,6 @@ const CoinFormat = () => {
         if (coin.symbol ==="sol") return coin;
         if (coin.symbol ==="hnt") return coin;
         if (coin.symbol ==="ksm") return coin;
-       //return coin.name.toLowerCase().includes(search.toLowerCase());
     });
 
     const HTLprice = () => {

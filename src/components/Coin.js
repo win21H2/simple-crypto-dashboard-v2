@@ -1,6 +1,6 @@
 import React from "react";
 
-const Coin = ({ image, symbol, price, volume, priceChange, high24h, low24h, lastupdated }) => {
+const Coin = ({ image, symbol, price, priceChange, high24h, low24h, lastupdated }) => {
   
   return (
     <>
