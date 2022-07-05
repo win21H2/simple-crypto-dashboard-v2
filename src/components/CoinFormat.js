@@ -4,7 +4,6 @@ import axios from "axios";
 
 const CoinFormat = () => {
     const [coins, setCoins] = useState([]);
-    const [setSearch] = useState("");
 
     useEffect(() => {
     axios
@@ -16,8 +15,6 @@ const CoinFormat = () => {
             console.log(err);
         });
     }, []);
-
-    const handleChange = (e) => { setSearch(e.target.value); };
 
     // eslint-disable-next-line
     const filteredCoins = coins.filter((coin) => {
@@ -51,9 +48,6 @@ const CoinFormat = () => {
                 <div className="coin-app">
                     <div id="PINNED--SORT">
                     <div className="coin-search">
-                        <form action="">
-                            <input type="text" placeholder="search for a coin" className="coin-input" onChange={handleChange}/><br />
-                        </form>
                         <div className="coin-HTLLTH">
                             <h4>Sort by (price)</h4>
                             <button onClick={HTLprice} className="sortbutton">high to low</button>
