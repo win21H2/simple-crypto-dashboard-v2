@@ -4,6 +4,10 @@
             {
                 "match": ".*",
                 "cmd": "sass src/components/style/main/main.scss src/components/style/main/main.css"
+            },
+            {
+                "match": ".*",
+                "cmd": "sass src/components/style/coin/coin.scss src/components/style/coin/coin.css"
             }
         ]
     }

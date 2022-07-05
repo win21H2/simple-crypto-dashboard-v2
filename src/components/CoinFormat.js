@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Coin from "./Coin";
 import axios from "axios";
-import AllCoin from "./AllCoin";
+//import AllCoin from "./AllCoin";
 
 const CoinFormat = () => {
     const [coins, setCoins] = useState([]);
@@ -20,6 +20,7 @@ const CoinFormat = () => {
 
     const handleChange = (e) => { setSearch(e.target.value); };
 
+    // eslint-disable-next-line
     const filteredCoins = coins.filter((coin) => {
         if (coin.symbol === "eth") return coin;
         if (coin.symbol ==="sol") return coin;
@@ -48,7 +49,7 @@ const CoinFormat = () => {
     return (
         <div>
             <div id="GENERAL--SORT">
-                <AllCoin />
+                {/*<AllCoin />*/}
             </div>
             <div id="CRYPTO--DISPLAY">
                 <div className="coin-app">
@@ -66,7 +67,6 @@ const CoinFormat = () => {
                             <button onClick={LTHmarketcap} className="sortbutton">low to high</button>
                         </div>
                     </div>
-                    <pre align="center">coin | price | market cap | high (24h) | low (24h) | change (24h) | last updated</pre><br/ >
                         <h4 align="center">Pinned</h4>
                         {filteredCoins.map((coin) => {
                             return (

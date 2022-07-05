@@ -49,10 +49,15 @@ $transition-05s: 0.5s;
     justify-content: space-between;
     text-align: $align;
     width: 100%;
+    /*center everything*/
+    margin-left: auto;
+    margin-right: auto;
+
 }
 .coin-format {
     border: 1px solid $primary-color;
-    width: 150vh;
+    width: 30%;
+    /*150px*/
     display: flex;
     font-size: 15px;
     display: flex;
@@ -97,4 +102,7 @@ $transition-05s: 0.5s;
     justify-content: $align;
     align-items: $align;
     border-radius: $border-radius-5px;
+}
+.coin-symbol {
+    font-size: 20px;
 }

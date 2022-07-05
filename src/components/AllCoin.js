@@ -57,7 +57,7 @@ const AllCoin = () => {
                             <button onClick={LTHmarketcap} className="sortbutton">low to high</button>
                         </div>
                     </div>
-                    <pre align="center">coin | price | market cap | high (24h) | low (24h) | change (24h) | last updated</pre><br/ >
+                    <pre align="center">coin | price | volume | high (24h) | low (24h) | change (24h) | last updated</pre><br/ >
 
                     <div id="GENERAL--SORT">
                         <h4 align="center">General</h4>

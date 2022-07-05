@@ -12,12 +12,14 @@ const Coin = ({ image, symbol, price, volume, priceChange, high24h, low24h, last
             <div className="coin-symbol">{symbol}</div>
           </div>
           <div className="coin-data">
-            <p className="coin-price">${price}</p>
-            <p className="coin-volume">${volume.toLocaleString()}</p>
-            <p className="coin-high24h">${high24h}</p>
-            <p className="coin-low24h">${low24h}</p>
-            {priceChange < 0 ? (<p className="coin-percent red">{priceChange.toFixed(1)}%</p>) : (<p className="coin-percent green">{priceChange.toFixed(1)}%</p>)}
+            <pre>
+            <p className="coin-price">Price: ${price}</p>
+            {/* <p className="coin-volume" align="center">${volume.toLocaleString()}</p> */}
+            <p className="coin-high24h">High (24h): ${high24h}</p>
+            <p className="coin-low24h">Low (24h): ${low24h}</p>
+            {priceChange < 0 ? (<p className="coin-percent red">Change (24h): {priceChange.toFixed(1)}%</p>) : (<p className="coin-percent green">Change (24h): {priceChange.toFixed(1)}%</p>)}
             <p className="coin-lastupdated">Last updated  {lastupdated}</p>
+            </pre>
           </div>
         </div>
       </div>

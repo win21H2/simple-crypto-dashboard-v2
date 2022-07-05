@@ -55,15 +55,11 @@
   justify-content: space-between;
   text-align: center;
   width: 100%;
-  /*center everything*/
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .coin-format {
   border: 1px solid #dcddde;
-  width: 30%;
-  /*150px*/
+  width: 150vh;
   display: flex;
   font-size: 15px;
   display: flex;
@@ -115,8 +111,4 @@
   border-radius: 5px;
 }
 
-.coin-symbol {
-  font-size: 20px;
-}
-
-/*# sourceMappingURL=coin.css.map */
+/*# sourceMappingURL=main.css.map */
