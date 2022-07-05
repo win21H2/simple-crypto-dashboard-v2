@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Coin from "./Coin";
 import axios from "axios";
-import AllCoin from "./AllCoin";
 
-const CoinFormat = () => {
+const AllCoin = () => {
     const [coins, setCoins] = useState([]);
-    const [setSearch] = useState("");
+    const [search, setSearch] = useState("");
 
     useEffect(() => {
     axios
@@ -21,11 +20,7 @@ const CoinFormat = () => {
     const handleChange = (e) => { setSearch(e.target.value); };
 
     const filteredCoins = coins.filter((coin) => {
-        if (coin.symbol === "eth") return coin;
-        if (coin.symbol ==="sol") return coin;
-        if (coin.symbol ==="hnt") return coin;
-        if (coin.symbol ==="ksm") return coin;
-       //return coin.name.toLowerCase().includes(search.toLowerCase());
+        return coin.name.toLowerCase().includes(search.toLowerCase());
     });
 
     const HTLprice = () => {
@@ -47,12 +42,8 @@ const CoinFormat = () => {
 
     return (
         <div>
-            <div id="GENERAL--SORT">
-                <AllCoin />
-            </div>
             <div id="CRYPTO--DISPLAY">
                 <div className="coin-app">
-                    <div id="PINNED--SORT">
                     <div className="coin-search">
                         <form action="">
                             <input type="text" placeholder="search for a coin" className="coin-input" onChange={handleChange}/><br />
@@ -67,7 +58,9 @@ const CoinFormat = () => {
                         </div>
                     </div>
                     <pre align="center">coin | price | market cap | high (24h) | low (24h) | change (24h) | last updated</pre><br/ >
-                        <h4 align="center">Pinned</h4>
+
+                    <div id="GENERAL--SORT">
+                        <h4 align="center">General</h4>
                         {filteredCoins.map((coin) => {
                             return (
                                 <>
@@ -87,13 +80,10 @@ const CoinFormat = () => {
                             );
                         })}
                     </div>
-                    <div id="meritcircle">
-                        <iframe src="https://treasury.meritcircle.io/" title="treasury" scrolling="no" className="treasury--display"></iframe>
-                    </div>
                 </div>
             </div>
         </div>
     )
 };
 
-export default CoinFormat;
+export default AllCoin;

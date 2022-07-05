@@ -2,8 +2,8 @@
     "emeraldwalk.runonsave": {
         "commands": [
             {
-                "match": "\\.scss$",
-                "cmd": "sass src/components/test.sass src/components/test.css"
+                "match": ".*",
+                "cmd": "sass src/components/style/main/main.scss src/components/style/main/main.css"
             }
         ]
     }
