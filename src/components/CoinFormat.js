@@ -78,7 +78,6 @@ const CoinFormat = () => {
                                     marketcap={coin.market_cap}
                                     price={coin.current_price}
                                     priceChange={coin.price_change_percentage_24h}
-                                    volume={coin.total_volume}
                                     high24h={coin.high_24h}
                                     low24h={coin.low_24h}
                                     lastupdated={coin.last_updated}
