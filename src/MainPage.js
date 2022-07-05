@@ -1,4 +1,5 @@
 import CoinFormat from "./components/CoinFormat";
+import "./components/test.css";
 
 const MainPage = () => {
     

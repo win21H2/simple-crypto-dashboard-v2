@@ -1,7 +1,7 @@
 import React from "react";
-import '../App.css'
+// import '../App.css';
 
-const Coin = ({ image, symbol, price, volume, priceChange, high24h, low24h, lastupdated, roi }) => {
+const Coin = ({ image, symbol, price, volume, priceChange, high24h, low24h, lastupdated }) => {
   return (
     <>
     <div id="CRYPTO--CURRENT">
@@ -16,7 +16,6 @@ const Coin = ({ image, symbol, price, volume, priceChange, high24h, low24h, last
             <p className="coin-volume">${volume.toLocaleString()}</p>
             <p className="coin-high24h">${high24h}</p>
             <p className="coin-low24h">${low24h}</p>
-            <p className="coin-roi">{roi}%</p>
             {priceChange < 0 ? (<p className="coin-percent red">{priceChange.toFixed(1)}%</p>) : (<p className="coin-percent green">{priceChange.toFixed(1)}%</p>)}
             <p className="coin-lastupdated">Last updated  {lastupdated}</p>
           </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../App.css";
+// import "../App.css";
 import Coin from "./Coin";
 import axios from "axios";
 
@@ -35,7 +35,7 @@ const CoinFormat = () => {
                             <input type="text" placeholder="search for a coin" className="coin-input" onChange={handleChange}/><br />
                         </form>
                     </div>
-                    <pre align="center">coin | price | market cap | high (24h) | low (24h) | ROI | change (24h) | last updated</pre><br/ >
+                    <pre align="center">coin | price | market cap | high (24h) | low (24h) | change (24h) | last updated</pre><br/ >
                     {filteredCoins.map((coin) => {
                         return (
                             <>
@@ -50,7 +50,6 @@ const CoinFormat = () => {
                                 high24h={coin.high_24h}
                                 low24h={coin.low_24h}
                                 lastupdated={coin.last_updated}
-                                coinroi={coin.roi}
                             />
                             </>
                         );

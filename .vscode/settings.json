@@ -1,0 +1,10 @@
+{
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "\\.sass$",
+                "cmd": "sass src/components/test.sass src/components/test.css"
+            }
+        ]
+    }
+}
