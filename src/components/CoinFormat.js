@@ -8,23 +8,23 @@ const CoinFormat = () => {
     const [search, setSearch] = useState("");
 
     useEffect(() => {
-        axios
-          .get( "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false" )
-          .then((res) => {
+    axios
+        .get( "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false" )
+        .then((res) => {
             setCoins(res.data);
-          })
-          .catch((err) => {
+        })
+        .catch((err) => {
             console.log(err);
-          });
-      }, [coins]);
+        });
+    }, [coins]);
 
     const handleChange = (e) => {
         setSearch(e.target.value);
-      };
- 
-      const filteredCoins = coins.filter((coin) => {
+    };
+
+    const filteredCoins = coins.filter((coin) => {
         return coin.name.toLowerCase().includes(search.toLowerCase());
-      });
+    });
 
     return (
         <div>
@@ -32,10 +32,10 @@ const CoinFormat = () => {
                 <div className="coin-app">
                     <div className="coin-search">
                         <form action="">
-                            <input type="text" placeholder="Search for coin" className="coin-input" onChange={handleChange}/><br />
+                            <input type="text" placeholder="search for a coin" className="coin-input" onChange={handleChange}/><br />
                         </form>
                     </div>
-                    <pre>Coin | Price | Market cap | High (24h) | Low (24h) | Change (24h) | Last updated</pre><br/ >
+                    <pre align="center">coin | price | market cap | high (24h) | low (24h) | ROI | change (24h) | last updated</pre><br/ >
                     {filteredCoins.map((coin) => {
                         return (
                             <>
@@ -50,6 +50,7 @@ const CoinFormat = () => {
                                 high24h={coin.high_24h}
                                 low24h={coin.low_24h}
                                 lastupdated={coin.last_updated}
+                                coinroi={coin.roi}
                             />
                             </>
                         );
