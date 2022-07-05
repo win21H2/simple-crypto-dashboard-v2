@@ -1,3 +1,7 @@
+body {
+  background-color: #22272e;
+}
+
 .red {
   color: #ff0000;
 }
@@ -34,10 +38,6 @@ h1, h3, p {
 html {
   cursor: crosshair;
   font-family: consolas;
-}
-
-body {
-  background-color: #22272e;
 }
 
 * {
@@ -103,6 +103,32 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.coin-HTLLTH {
+  border: 1px solid #dcddde;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.sortbutton {
+  background-color: #dcddde;
+  border-radius: 5px;
+  color: #22272e;
+  border: none;
+  padding: 10px;
+  cursor: crosshair;
+  font-size: 10px;
+  color: #22272e;
+  background-color: #dcddde;
+  transition: font-size 1s, color 0.5s, background-color 0.5s;
+}
+
+.sortbutton:hover {
+  font-size: 20px;
+  color: #dcddde;
+  background-color: #22272e;
+  transition: font-size 1s, color 0.5s, background-color 0.5s;
 }
 
 /*# sourceMappingURL=test.css.map */

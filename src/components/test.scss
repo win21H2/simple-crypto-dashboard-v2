@@ -6,7 +6,13 @@ $crypto-negative-color: #ff0000;
 $width-200px: 200px;
 $cursor-crosshair: crosshair;
 $border-radius-5px: 5px;
+$size-50px: 50px;
+$size-10px: 10px;
+$align: center;
+$transtion-1s: 1s;
+$transition-05s: 0.5s;
 
+body { background-color: $secondary-color; }
 .red { color: $crypto-negative-color; }
 .green { color: $crypto-positive-color; }
 ::-webkit-scrollbar { display: none; }
@@ -22,28 +28,25 @@ html {
     cursor: $cursor-crosshair;
     font-family: $font-stack;
 }
-body {
-    background-color: $secondary-color;
-}
 * {
     box-sizing: border-box;
-    margin: 10px;
+    margin: $size-10px;
     padding: 0;
     font-family: $font-stack;
     background-color: $secondary-color;
     color: $primary-color;
 }
 .coin-search {
-    margin-bottom: 10px;
+    margin-bottom: $size-10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: $align;
+    align-items: $align;
 }
 .coin-input {
-    padding-left: 50px;
+    padding-left: $size-50px;
     width: 300px;
-    height: 50px;
+    height: $size-50px;
     border: none;
     color:  $primary-color;
     border: 1px solid $primary-color;
@@ -51,20 +54,20 @@ body {
     border-radius: $border-radius-5px;
 }
 .coin img {
-    height: 50px;
-    width: 50px;
-    margin-right: 10px;
+    height: $size-50px;
+    width: $size-50px;
+    margin-right: $size-10px;
 }
 .coin {
     display: flex;
-    align-items: center;
+    align-items: $align;
     padding-right: 24px;
     min-width: 100px;
 }
 .coin-data {
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    text-align: $align;
     width: 100%;
 }
 .coin-format {
@@ -73,12 +76,35 @@ body {
     display: flex;
     font-size: 15px;
     display: flex;
-    align-items: center;
+    align-items: $align;
     border-radius: $border-radius-5px;
 }
 .coin-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: $align;
+    align-items: $align;
+}
+.coin-HTLLTH {
+  border: 1px solid $primary-color;
+  border-radius: $border-radius-5px;
+  text-align: $align;
+}
+.sortbutton {
+  background-color: $primary-color;
+  border-radius: $border-radius-5px;
+  color: $secondary-color;
+  border: none;
+  padding: $size-10px;
+  cursor: $cursor-crosshair;
+  font-size: $size-10px;
+  color: $secondary-color;
+  background-color: $primary-color;
+  transition: font-size $transtion-1s,color $transition-05s, background-color $transition-05s;
+}
+.sortbutton:hover {
+  font-size: 20px;
+  color: $primary-color;
+  background-color: $secondary-color;
+  transition: font-size $transtion-1s, color $transition-05s, background-color $transition-05s;
 }

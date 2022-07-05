@@ -1,5 +1,4 @@
 import React from "react";
-// import '../App.css';
 
 const Coin = ({ image, symbol, price, volume, priceChange, high24h, low24h, lastupdated }) => {
   return (

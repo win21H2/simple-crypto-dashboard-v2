@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import "../App.css";
 import Coin from "./Coin";
 import axios from "axios";
 
@@ -26,6 +25,22 @@ const CoinFormat = () => {
         return coin.name.toLowerCase().includes(search.toLowerCase());
     });
 
+    const HTL = () => {
+        const sortedCoins = filteredCoins.sort((a, b) => {
+            return b.current_price - a.current_price;
+        });
+        setCoins(sortedCoins);
+    };
+
+    // try to figure out how to keep it at the sorted coins (most likely using states for example setState)
+
+    const LTH = () => {
+        const sortedCoins = filteredCoins.sort((a, b) => {
+            return a.current_price - b.current_price;
+        });
+        setCoins(sortedCoins);
+    };
+
     return (
         <div>
             <div id="CRYPTO--DISPLAY">
@@ -34,6 +49,11 @@ const CoinFormat = () => {
                         <form action="">
                             <input type="text" placeholder="search for a coin" className="coin-input" onChange={handleChange}/><br />
                         </form>
+                        <div className="coin-HTLLTH">
+                            <h4>Sort by</h4>
+                            <button onClick={HTL} className="sortbutton">high to low</button>
+                            <button onClick={LTH} className="sortbutton">low to high</button>
+                        </div>
                     </div>
                     <pre align="center">coin | price | market cap | high (24h) | low (24h) | change (24h) | last updated</pre><br/ >
                     {filteredCoins.map((coin) => {
