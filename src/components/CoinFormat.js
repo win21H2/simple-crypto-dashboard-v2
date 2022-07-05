@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Coin from "./Coin";
 import axios from "axios";
-//import AllCoin from "./AllCoin";
 
 const CoinFormat = () => {
     const [coins, setCoins] = useState([]);
@@ -48,9 +47,6 @@ const CoinFormat = () => {
 
     return (
         <div>
-            <div id="GENERAL--SORT">
-                {/*<AllCoin />*/}
-            </div>
             <div id="CRYPTO--DISPLAY">
                 <div className="coin-app">
                     <div id="PINNED--SORT">
