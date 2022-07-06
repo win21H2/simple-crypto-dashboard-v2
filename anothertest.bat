@@ -1,11 +1,7 @@
 @echo off
-mode 32,10
-
+mode 34,10
 title Timer
-
 :start
-title Enter time to countdown from.
-
 cls
 set time=10
 :loop
@@ -20,6 +16,6 @@ echo Countdown - [%time%]
 ping localhost -n 2 > nul
 goto loop
 :timesup
-echo Time is Up!!
+ECHO [31mTime is up...[0m
 pause
 goto start

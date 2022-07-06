@@ -29,5 +29,4 @@ ECHO =========================
 ipconfig | findstr IPv4
 ipconfig | findstr IPv6
 ECHO [31mWARNING! CLOSING IN 30s...[0m
-timeout 30 >nul
-exit
+PAUSE
