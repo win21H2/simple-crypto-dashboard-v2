@@ -11,6 +11,8 @@ $align: center;
 $transtion-1s: 1s;
 $transition-05s: 0.5s;
 
+// FIGURE OUT HOW TO MAKE THE THINGS CENTERED GODDAMN
+
 .red { color: $crypto-negative-color; }
 .green { color: $crypto-positive-color; }
 .coin-search {
@@ -57,6 +59,11 @@ $transition-05s: 0.5s;
     flex-direction: column;
     justify-content: $align;
     align-items: $align;
+}
+.COIN-ALIGN {
+  display: grid;
+  align-content:unset;
+  margin: auto;
 }
 
 

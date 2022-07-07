@@ -56,6 +56,12 @@
   align-items: center;
 }
 
+.COIN-ALIGN {
+  display: grid;
+  align-content: unset;
+  margin: auto;
+}
+
 .coin-HTLLTH {
   border: 1px solid #dcddde;
   border-radius: 5px;

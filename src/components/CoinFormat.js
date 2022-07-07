@@ -55,8 +55,6 @@ const CoinFormat = () => {
                             <button onClick={HTLmarketcap} className="sortbutton">high to low</button>
                             <button onClick={LTHmarketcap} className="sortbutton">low to high</button>
                         </div>
-                    </div>
-                        <h4 align="center">Pinned</h4>
                         {filteredCoins.map((coin) => {
                             return (
                                 <>
@@ -74,6 +72,9 @@ const CoinFormat = () => {
                                 </>
                             );
                         })}
+                    </div>
+                    <div className ="COIN-ALIGN">
+                    </div>
                     </div>
                     {/* <div id="meritcircle">
                         <iframe src="https://treasury.meritcircle.io/" title="treasury" scrolling="no" className="treasury--display"></iframe>
