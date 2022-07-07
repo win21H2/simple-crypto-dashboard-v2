@@ -2,4 +2,26 @@
   cursor: crosshair;
 }
 
+.centered {
+  text-align: center;
+}
+
+table, th, td {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+.solanabeach-centeralign {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.solanabeach-tablealign {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 /*# sourceMappingURL=solanabeach.css.map */

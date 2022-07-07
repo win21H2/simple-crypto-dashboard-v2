@@ -15,26 +15,29 @@ const SolanaBeachWalletFormat = () => {
             .catch((err) => {
                 console.log(err);
             });
-        }, []);
+    }, []);
 
-        // eslint-disable-next-line
-        const filteredSOL = sol.filter((sol) => {
-            return sol;
-        });
+    const filteredSOL = sol.filter((sol) => { return sol; });
 
     return (
         <div>
-            {filteredSOL.map((sol) => {
-                return (
-                    <>
-                    <SolanaBeachWallet
-                        apr={sol.apr}
-                        epoch={sol.epoch}
-                        amount={sol.amount}
-                    />
-                    </>
-                );
-            })}
+            <div className="solanabeach-centeralign">
+                <h1>Solana wallet</h1>
+                <a className="cursor-crosshair" href="https://solanabeach.io/address/CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu"><h4>Wallet: CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu</h4></a>
+                <div className="solanabeach-tablealign">
+                    {filteredSOL.map((sol) => {
+                        return (
+                            <>
+                            <SolanaBeachWallet
+                                apr={sol.apr}
+                                epoch={sol.epoch}
+                                amount={sol.amount}
+                            />
+                            </>
+                        );
+                    })}
+                </div>
+            </div>
         </div>
     );
   };

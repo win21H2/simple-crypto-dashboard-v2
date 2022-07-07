@@ -7,11 +7,18 @@ const SolanaBeachWallet = ({ apr, epoch, amount }) => {
     <>
     <div className="solanabeach-wallet">
             <pre>
-            <a className="cursor-crosshair" href="https://solanabeach.io/address/CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu"><h5>Wallet: CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu</h5></a>
-            <div className="sol-epoch">EPOCH: {epoch}</div>
-            <div className="sol-apr">APR: {apr}</div>
-            <div className="sol-amount">AMOUNT: {amount}</div>
-            <br/>
+            <table>
+              <tr>
+                <th>EPOCH</th>
+                <th>APR</th>
+                <th>AMOUNT</th>
+              </tr>
+              <tr>
+                <td className="centered">{epoch}</td>
+                <td className="centered">{apr}</td>
+                <td className="centered">{amount}</td>
+              </tr>
+            </table>
             </pre>
     </div>
     </>
