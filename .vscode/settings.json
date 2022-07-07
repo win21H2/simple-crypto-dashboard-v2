@@ -8,6 +8,10 @@
             {
                 "match": ".*",
                 "cmd": "sass src/components/style/coin/coin.scss src/components/style/coin/coin.css"
+            },
+            {
+                "match": ".*",
+                "cmd": "sass src/components/style/solanabeach/solanabeach.scss src/components/style/solanabeach/solanabeach.css"
             }
         ]
     }

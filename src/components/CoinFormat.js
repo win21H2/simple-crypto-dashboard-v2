@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Coin from "./Coin";
 import axios from "axios";
+import SolanaBeachWalletFormat from "./SolanaBeachWalletFormat";
 
 const CoinFormat = () => {
     const [coins, setCoins] = useState([]);
@@ -101,6 +102,7 @@ const CoinFormat = () => {
                                 </>
                             );
                         })}
+                         <SolanaBeachWalletFormat />
                     </div>
                     <br/><br/>
                 </div>
