@@ -11,8 +11,8 @@ $align: center;
 $transtion-1s: 1s;
 $transition-05s: 0.5s;
 
-.red { color: $crypto-negative-color; }
-.green { color: $crypto-positive-color; }
+.red, .coin-low24h { color: $crypto-negative-color; }
+.green, .coin-high24h { color: $crypto-positive-color; }
 .treasury--display { border-radius: $border-radius-5px; }
 .coin img {
     height: $size-50px;
