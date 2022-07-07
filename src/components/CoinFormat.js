@@ -41,16 +41,9 @@ const CoinFormat = () => {
         setCoins(sortedCoins);
     };
 
-    /*
-    Essentially what is happening is that the coin data is not being centered with the search
-    toolbar and what I am thinking its because of is due to the fact that the coin display is
-    technically in two different files which means that unlsss we put the centering divs from one
-    file into the other coin file or we put the whole coin display function in one file, ot will
-    not be centered.
-    */
+
     return (
         <div>
-            <div id="CRYPTO--DISPLAY">
                 <div className="coin-app">
                     <div className="coin-search">
                         <div className="coin-HTLLTH">
@@ -60,6 +53,7 @@ const CoinFormat = () => {
                             <h4>Sort by (market cap)</h4>
                             <button onClick={HTLmarketcap} className="sortbutton">high to low</button>
                             <button onClick={LTHmarketcap} className="sortbutton">low to high</button>
+                            <br/><br/>
                         </div>
                         {filteredCoins.map((coin) => {
                             return (
@@ -79,11 +73,12 @@ const CoinFormat = () => {
                             );
                         })}
                     </div>
-                    {/* <div id="meritcircle">
-                        <iframe src="https://treasury.meritcircle.io/" title="treasury" scrolling="no" className="treasury--display"></iframe>
-                    </div> */}
+                    <div id="meritcircle">
+                        <center>
+                        <iframe src="https://treasury.meritcircle.io/" title="treasury" width="100%" height="1325px" scrolling="no" className="treasury--display"></iframe>
+                        </center>
+                    </div>
                 </div>
-            </div>
         </div>
     )
 };

@@ -36,21 +36,13 @@
   align-items: center;
 }
 
-.COIN-ALIGN {
-  display: grid;
-  align-content: unset;
-  margin: auto;
-}
-
-pre {
-  margin: auto;
-  text-align: center;
-}
-
 .coin-HTLLTH {
   border: 1px solid #dcddde;
   border-radius: 5px;
   text-align: center;
+  width: 10em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sortbutton {
@@ -71,6 +63,10 @@ pre {
   color: #dcddde;
   background-color: #22272e;
   transition: font-size 1s, color 0.5s, background-color 0.5s;
+}
+
+.treasury--display {
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=coin.css.map */

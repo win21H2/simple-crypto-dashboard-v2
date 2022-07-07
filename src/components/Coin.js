@@ -8,7 +8,6 @@ const Coin = ({ image, symbol, price, priceChange, high24h, low24h, lastupdated 
       <div className="coin-container">
         <div className="coin-format">
           <div className="coin-data">
-            <div className="coin-HTLLTH">
             <pre>
             <div className="coin">
               <a href={image} target="_blank" rel="noreferrer" className="cursor-crosshair"><img src={image} alt=""/></a><br/>
@@ -20,7 +19,6 @@ const Coin = ({ image, symbol, price, priceChange, high24h, low24h, lastupdated 
             {priceChange < 0 ? (<p className="coin-percent red">Change (24h): {priceChange.toFixed(1)}%</p>) : (<p className="coin-percent green">Change (24h): {priceChange.toFixed(1)}%</p>)}
             <p className="coin-lastupdated">Last updated  {lastupdated}</p>
             </pre>
-          </div>
           </div>
         </div>
       </div>
