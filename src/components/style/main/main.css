@@ -23,7 +23,6 @@ html {
 * {
   box-sizing: border-box;
   margin: 10px;
-  padding: 0;
   font-family: consolas;
   background-color: #22272e;
   color: #dcddde;

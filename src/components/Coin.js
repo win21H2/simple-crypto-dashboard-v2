@@ -7,12 +7,12 @@ const Coin = ({ image, symbol, price, priceChange, high24h, low24h, lastupdated 
     <div id="CRYPTO--CURRENT">
       <div className="coin-container">
         <div className="coin-format">
-          <div className="coin">
-            <a href={image} target="_blank" rel="noreferrer" className="cursor-crosshair"><img src={image} alt="" /></a>
-            <div className="coin-symbol">{symbol}</div>
-          </div>
           <div className="coin-data">
             <pre>
+            <div className="coin">
+              <a href={image} target="_blank" rel="noreferrer" className="cursor-crosshair"><img src={image} alt=""/></a><br/>
+            </div>
+            <div className="coin-symbol">Symbol: <b>{symbol}</b></div>
             <p className="coin-price">Price: ${price}</p>
             <p className="coin-high24h">High (24h): ${high24h}</p>
             <p className="coin-low24h">Low (24h): ${low24h}</p>

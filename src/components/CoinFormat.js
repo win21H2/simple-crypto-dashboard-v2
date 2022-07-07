@@ -75,9 +75,9 @@ const CoinFormat = () => {
                             );
                         })}
                     </div>
-                    <div id="meritcircle">
+                    {/* <div id="meritcircle">
                         <iframe src="https://treasury.meritcircle.io/" title="treasury" scrolling="no" className="treasury--display"></iframe>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
