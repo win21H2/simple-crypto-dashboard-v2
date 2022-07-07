@@ -8,6 +8,20 @@ const Coin = ({ image, symbol, price, priceChange, high24h, low24h, name, totals
   const totalsupplynew = totalsupply.toLocaleString('en-US', {maximumFractionDigits: 2});
   const circsupplynew = circsupply.toLocaleString('en-US', {maximumFractionDigits: 2});
 
+  // try to pick out each coin and list the price to console and then from there try to individually color the price
+  if (symbol === "eth") {
+    console.log("eth price:" + pricenew);
+  };
+  if (symbol === "sol") {
+    console.log("sol price:" + pricenew);
+  };
+  if (symbol === "hnt") {
+    console.log("hnt price:" + pricenew);
+  };
+  if (symbol === "ksm") {
+    console.log("ksm price:" + pricenew);
+  };
+
   return (
     <>
     <div id="CRYPTO--CURRENT">
@@ -23,7 +37,11 @@ const Coin = ({ image, symbol, price, priceChange, high24h, low24h, name, totals
             <p className="coin-price">current price: ${pricenew}</p>
             <p className="coin-high24h">high (24h): ${high24hnew}</p>
             <p className="coin-low24h">low (24h): ${low24hnew}</p>
-            {priceChange < 0 ? (<p className="coin-percent red">change (24h): {priceChange.toFixed(1)}%</p>) : (<p className="coin-percent green">Change (24h): {priceChange.toFixed(1)}%</p>)}
+            {/*
+            compare if the price is in between the mid point and up to high24hnew = GREEN
+            compare if the price is in between the mid point and down to low24hnew = RED
+            */}
+            {priceChange < 0 ? (<p className="coin-percent red">change (24h): {priceChange.toFixed(2)}%</p>) : (<p className="coin-percent green">Change (24h): {priceChange.toFixed(2)}%</p>)}
             <p className="">total supply: {totalsupplynew}</p>
             <p className="">circulating supply: {circsupplynew}</p>
             <br/>
