@@ -14,6 +14,14 @@
   height: 50px;
   width: 50px;
   margin-bottom: 20px;
+  cursor: crosshair;
+  transition: 1s;
+}
+
+.coin img:hover {
+  height: 75px;
+  width: 75px;
+  transition: 1s;
 }
 
 .coin-data {
