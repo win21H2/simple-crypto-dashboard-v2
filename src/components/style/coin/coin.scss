@@ -15,23 +15,6 @@ $transition-05s: 0.5s;
 
 .red { color: $crypto-negative-color; }
 .green { color: $crypto-positive-color; }
-.coin-search {
-    margin-bottom: $size-10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: $align;
-    align-items: $align;
-}
-.coin-input {
-    padding-left: $size-50px;
-    width: 300px;
-    height: $size-50px;
-    border: none;
-    color:  $primary-color;
-    border: 1px solid $primary-color;
-    cursor: crosshair;
-    border-radius: $border-radius-5px;
-}
 .coin img {
     height: $size-50px;
     width: $size-50px;
@@ -55,8 +38,8 @@ $transition-05s: 0.5s;
     border-radius: $border-radius-5px;
 }
 .coin-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    // // flex-direction: column;
     justify-content: $align;
     align-items: $align;
 }
@@ -64,6 +47,10 @@ $transition-05s: 0.5s;
   display: grid;
   align-content:unset;
   margin: auto;
+}
+pre {
+  margin:auto;
+  text-align: center;
 }
 
 

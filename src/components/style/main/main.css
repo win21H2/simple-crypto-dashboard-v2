@@ -21,8 +21,6 @@ html {
 }
 
 * {
-  box-sizing: border-box;
-  margin: 10px;
   font-family: consolas;
   background-color: #22272e;
   color: #dcddde;

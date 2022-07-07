@@ -41,11 +41,17 @@ const CoinFormat = () => {
         setCoins(sortedCoins);
     };
 
+    /*
+    Essentially what is happening is that the coin data is not being centered with the search
+    toolbar and what I am thinking its because of is due to the fact that the coin display is
+    technically in two different files which means that unlsss we put the centering divs from one
+    file into the other coin file or we put the whole coin display function in one file, ot will
+    not be centered.
+    */
     return (
         <div>
             <div id="CRYPTO--DISPLAY">
                 <div className="coin-app">
-                    <div id="PINNED--SORT">
                     <div className="coin-search">
                         <div className="coin-HTLLTH">
                             <h4>Sort by (price)</h4>
@@ -72,9 +78,6 @@ const CoinFormat = () => {
                                 </>
                             );
                         })}
-                    </div>
-                    <div className ="COIN-ALIGN">
-                    </div>
                     </div>
                     {/* <div id="meritcircle">
                         <iframe src="https://treasury.meritcircle.io/" title="treasury" scrolling="no" className="treasury--display"></iframe>
