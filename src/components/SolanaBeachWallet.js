@@ -1,26 +1,29 @@
 import React from "react";
 import "../components/style/solanabeach/solanabeach.css";
 
-const SolanaBeachWallet = ({ apr, epoch, amount }) => {
+const SolanaBeachWallet = ({ apr, epoch, amount, effectiveSlot, postBalance }) => {
+
+  const aprnew = apr.toFixed(2);
+  const amountnew = amount/1000000000;
+  const amountnewnew = amountnew.toFixed(2);
+  const postBalancenew = postBalance/1000000000;
+  const postBalancenewnew = postBalancenew.toLocaleString('en-US', {maximumFractionDigits: 2});
 
   return (
     <>
     <div className="solanabeach-wallet">
-            <pre>
-            <table>
-              <tr>
-                <th>EPOCH</th>
-                <th>APR</th>
-                <th>AMOUNT</th>
-              </tr>
-              <tr>
-                <td className="centered">{epoch}</td>
-                <td className="centered">{apr}</td>
-                <td className="centered">{amount}</td>
-              </tr>
-            </table>
-            </pre>
+      <pre>
+        <center>
+          <th> epoch: {epoch} </th><br/>
+          <th> amount: {amountnewnew} SOL </th><br/>
+          <th> new balance: {postBalancenewnew} SOL </th><br/>
+          <th> apr: {aprnew}% </th><br/>
+          <th> reward slot: {effectiveSlot} </th><br/>
+        </center>
+      </pre>
     </div>
+    <br/>
+    <br/>
     </>
   );
 };

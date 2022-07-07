@@ -17,13 +17,14 @@ const SolanaBeachWalletFormat = () => {
             });
     }, []);
 
+
     const filteredSOL = sol.filter((sol) => { return sol; });
 
     return (
         <div>
             <div className="solanabeach-centeralign">
-                <h1>Solana wallet</h1>
-                <a className="cursor-crosshair" href="https://solanabeach.io/address/CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu"><h4>Wallet: CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu</h4></a>
+                <h1>solana wallet</h1>
+                <a className="cursor-crosshair" href="https://solanabeach.io/address/CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu"><h5>wallet address: CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu</h5></a>
                 <div className="solanabeach-tablealign">
                     {filteredSOL.map((sol) => {
                         return (
@@ -32,6 +33,8 @@ const SolanaBeachWalletFormat = () => {
                                 apr={sol.apr}
                                 epoch={sol.epoch}
                                 amount={sol.amount}
+                                effectiveSlot={sol.effectiveSlot}
+                                postBalance={sol.postBalance}
                             />
                             </>
                         );

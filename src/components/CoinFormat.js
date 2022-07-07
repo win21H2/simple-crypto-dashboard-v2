@@ -71,7 +71,7 @@ const CoinFormat = () => {
             <div className="coin-app">
                 <div className="coin-search">
                     <div className="coin-HTLLTH">
-                        <h4>Filter</h4>
+                        <h4>filter</h4>
                         <pre>
                             <button onClick={HTLprice} className="sortbutton">high to low (price $USD)</button><br/>
                             <button onClick={LTHprice} className="sortbutton">low to high (price $USD)</button>
