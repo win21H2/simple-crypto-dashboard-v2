@@ -1,4 +1,5 @@
 import React from "react";
+import PriceColorGradient from "./PriceColorGradient";
 
 const Coin = ({ image, symbol, price, priceChange, high24h, low24h, name, totalsupply, circsupply }) => {
 
@@ -7,20 +8,6 @@ const Coin = ({ image, symbol, price, priceChange, high24h, low24h, name, totals
   const low24hnew = low24h.toLocaleString('en-US', {maximumFractionDigits: 2});
   const totalsupplynew = totalsupply.toLocaleString('en-US', {maximumFractionDigits: 2});
   const circsupplynew = circsupply.toLocaleString('en-US', {maximumFractionDigits: 2});
-
-  // try to pick out each coin and list the price to console and then from there try to individually color the price
-  if (symbol === "eth") {
-    console.log("eth price:" + pricenew);
-  };
-  if (symbol === "sol") {
-    console.log("sol price:" + pricenew);
-  };
-  if (symbol === "hnt") {
-    console.log("hnt price:" + pricenew);
-  };
-  if (symbol === "ksm") {
-    console.log("ksm price:" + pricenew);
-  };
 
   return (
     <>
@@ -34,9 +21,11 @@ const Coin = ({ image, symbol, price, priceChange, high24h, low24h, name, totals
             </div>
             <div className="coin-symbol">symbol: <b>{symbol}</b></div>
             <div className="coin-name">name: <b>{name}</b></div>
-            <p className="coin-price">current price: ${pricenew}</p>
-            <p className="coin-high24h">high (24h): ${high24hnew}</p>
-            <p className="coin-low24h">low (24h): ${low24hnew}</p>
+            <PriceColorGradient 
+              price = {pricenew}
+              high24h = {high24hnew}
+              low24h = {low24hnew}
+            />
             {/*
             compare if the price is in between the mid point and up to high24hnew = GREEN
             compare if the price is in between the mid point and down to low24hnew = RED
