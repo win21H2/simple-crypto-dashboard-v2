@@ -32,46 +32,52 @@ const CoinFormat = () => {
         const sortedCoins = filteredCoins.sort((a, b) => { return a.current_price - b.current_price; });
         setCoins(sortedCoins);
     };
-    const HTLmarketcap = () => {
-        const sortedCoins = filteredCoins.sort((a, b) => { return b.market_cap - a.market_cap; });
+    const HTLchange = () => {
+        const sortedCoins = filteredCoins.sort((a, b) => { return b.price_change_percentage_24h - a.price_change_percentage_24h; });
         setCoins(sortedCoins);
     };
-    const LTHmarketcap = () => {
-        const sortedCoins = filteredCoins.sort((a, b) => { return a.market_cap - b.market_cap; });
+    const LTHchange = () => {
+        const sortedCoins = filteredCoins.sort((a, b) => { return a.price_change_percentage_24h - b.price_change_percentage_24h; });
         setCoins(sortedCoins);
     };
-
 
     return (
         <div>
                 <div className="coin-app">
                     <div className="coin-search">
                         <div className="coin-HTLLTH">
-                            <h4>Sort by (price)</h4>
-                            <button onClick={HTLprice} className="sortbutton">high to low</button>
-                            <button onClick={LTHprice} className="sortbutton">low to high</button>
-                            <h4>Sort by (market cap)</h4>
-                            <button onClick={HTLmarketcap} className="sortbutton">high to low</button>
-                            <button onClick={LTHmarketcap} className="sortbutton">low to high</button>
-                            <br/><br/>
+                            <h4>Filter</h4>
+                            <pre>
+                                <button onClick={HTLprice} className="sortbutton">high to low (price $USD)</button><br/><br/>
+                                <button onClick={LTHprice} className="sortbutton">low to high (price $USD)</button>
+                                <br/><br/><br/>
+                                <button onClick={HTLchange} className="sortbutton">high to low (change %)</button><br/><br/>
+                                <button onClick={LTHchange} className="sortbutton">low to high (change %)</button>
+                            </pre>
                         </div>
-                        {filteredCoins.map((coin) => {
-                            return (
-                                <>
-                                <Coin
-                                    key={coin.id}
-                                    image={coin.image}
-                                    symbol={coin.symbol}
-                                    marketcap={coin.market_cap}
-                                    price={coin.current_price}
-                                    priceChange={coin.price_change_percentage_24h}
-                                    high24h={coin.high_24h}
-                                    low24h={coin.low_24h}
-                                    lastupdated={coin.last_updated}
-                                />
-                                </>
-                            );
-                        })}
+                        <br/>
+                        <br/>
+                        <div className="coin-boundbox">
+                            {filteredCoins.map((coin) => {
+                                return (
+                                    <>
+                                    <Coin
+                                        key={coin.id}
+                                        image={coin.image}
+                                        symbol={coin.symbol}
+                                        price={coin.current_price}
+                                        priceChange={coin.price_change_percentage_24h}
+                                        high24h={coin.high_24h}
+                                        low24h={coin.low_24h}
+                                        lastupdated={coin.last_updated}
+                                    />
+                                    </>
+                                );
+                            })}
+                            {/* COPY AND PASTE THE COIN DATA AND TRANSFORM IT SO THAT */}
+                        </div>
+                        <br/>
+                        <br/>
                     </div>
                     <div id="meritcircle">
                         <center>
