@@ -1,0 +1,18 @@
+$primary-color: #dcddde;
+$secondary-color: #22272e;
+$crypto-positive-color: #00ff00;
+$crypto-negative-color: #ff0000;
+$width-200px: 200px;
+$cursor-crosshair: crosshair;
+$border-radius-5px: 5px;
+$size-50px: 50px;
+$size-10px: 10px;
+$align: center;
+$transtion-1s: 1s;
+$transition-05s: 0.5s;
+
+.cont { color: $crypto-positive-color; }
+.contnew { color: $crypto-negative-color; }
+.red, .coin-low24h { color: $crypto-negative-color; }
+.green, .coin-high24h { color: $crypto-positive-color; }
+.high24h { color: $crypto-positive-color; }

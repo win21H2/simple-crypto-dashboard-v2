@@ -33,28 +33,6 @@ const CoinFormat = () => {
         const sortedCoins = filteredCoins.sort((a, b) => { return a.current_price - b.current_price; });
         setCoins(sortedCoins);
     };
-    // const checkPrice = () => {
-    //     filteredCoins.forEach((coin) => {
-    //         if (coin.symbol === "eth") {
-    //             if (coin.current_price === coin.high_24h) {
-    //                 //set the color of coin.current_price to green
-    //             } else {
-
-    //             }
-    //             if (coin.current_price > ((coin.low_24h + coin.high_24h) / 2)) {
-    //                 //set the color of coin.current_price to green
-    //             } else {
-                    
-    //             }
-    //             if (coin.current_price === coin.low_24h) {
-    //                 //set the color of coin.current_price to red
-    //             } else {
-                    
-    //             }
-    //         }
-    //     }
-    // )};
-    // checkPrice();
     /*
     NOTES:
      - Try to make drop-down menus for the coins

@@ -1,0 +1,21 @@
+.cont {
+  color: #00ff00;
+}
+
+.contnew {
+  color: #ff0000;
+}
+
+.red, .coin-low24h {
+  color: #ff0000;
+}
+
+.green, .coin-high24h {
+  color: #00ff00;
+}
+
+.high24h {
+  color: #00ff00;
+}
+
+/*# sourceMappingURL=pricecolor.css.map */
