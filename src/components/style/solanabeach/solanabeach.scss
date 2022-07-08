@@ -1,6 +1,5 @@
-$primary-color: #dcddde;
-$secondary-color: #0d1821;
-$tertiary-color: #515052;
+$primary-color: #7c7c7c;
+$secondary-color: #262626;
 $width-200px: 200px;
 $cursor-crosshair: crosshair;
 $border-radius-5px: 5px;
@@ -13,7 +12,7 @@ $transition-05s: 0.5s;
 .cursor-crosshair { cursor: $cursor-crosshair; }
 .centered { text-align: center; }
 table, th, td {
-    border: 1px dashed $tertiary-color;
+    border: 1px dashed $primary-color;
     border-collapse: collapse;
     border-radius: $border-radius-5px;
 }

@@ -8,7 +8,6 @@ const SolanaBeachWallet = ({ apr, epoch, amount, postBalance }) => {
   const amountnewnew = amountnew.toFixed(2);
   const postBalancenew = postBalance/1000000000;
   const postBalancenewnew = postBalancenew.toLocaleString('en-US', {maximumFractionDigits: 2});
-  const effectiveSlotnew = effectiveSlot.toLocaleString('en-US', {maximumFractionDigits: 2});
 
   return (
     <>

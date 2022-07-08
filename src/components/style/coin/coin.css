@@ -1,5 +1,5 @@
 .middefault {
-  color: #dcddde;
+  color: #7c7c7c;
 }
 
 .red, .coin-low24h, .midfalse {
@@ -55,7 +55,7 @@
 }
 
 .sortbutton {
-  background-color: #dcddde;
+  background-color: #7c7c7c;
   border-radius: 5px;
   color: rgba(255, 255, 255, 0.8);
   border: none;
@@ -63,15 +63,15 @@
   padding: 10px;
   cursor: crosshair;
   font-size: 15px;
-  color: #0d1821;
-  background-color: #dcddde;
+  color: #262626;
+  background-color: #7c7c7c;
   transition: font-size 1s, color 0.5s, background-color 0.5s;
 }
 
 .sortbutton:hover {
   font-size: 20px;
-  color: #dcddde;
-  background-color: #0d1821;
+  color: #7c7c7c;
+  background-color: #262626;
   transition: font-size 1s, color 0.5s, background-color 0.5s;
 }
 

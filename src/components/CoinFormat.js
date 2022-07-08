@@ -35,13 +35,7 @@ const CoinFormat = () => {
         const sortedCoins = filteredCoins.sort((a, b) => { return a.current_price - b.current_price; });
         setCoins(sortedCoins);
     };
-
-    /*
-    NOTES:
-     - Try to make drop-down menus for the coins
-     - Try to make the current price color reflect the low and high values compared to the current price
-     - Show the converted rate from SOL to USD (this feature might get implemented later due to cross files)
-    */
+    
     return (
         <div>
             <div className="coin-app">

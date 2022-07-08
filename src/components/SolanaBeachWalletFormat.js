@@ -8,7 +8,7 @@ const SolanaBeachWalletFormat = () => {
 
     useEffect(() => {
         axios
-            .get( "https://public-api.solanabeach.io/v1/account/CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu/stake-rewards?" )
+            .get("https://public-api.solanabeach.io/v1/account/CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu/stake-rewards?")
             .then((res) => { setSol(res.data); })
             .catch((err) => { console.log(err); });
     }, []);
