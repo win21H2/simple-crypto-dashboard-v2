@@ -1,9 +1,13 @@
-.cont {
+.contgreen {
   color: #00ff00;
 }
 
-.contnew {
+.contred {
   color: #ff0000;
+}
+
+.contyellow {
+  color: #ffa500;
 }
 
 .red, .coin-low24h {

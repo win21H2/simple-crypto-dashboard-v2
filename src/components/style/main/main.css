@@ -1,5 +1,5 @@
 body {
-  background-color: #22272e;
+  background-color: #0d1821;
 }
 
 ::-webkit-scrollbar {
@@ -12,7 +12,7 @@ body {
 
 h1, h3, p {
   font-family: consolas;
-  color: #dcddde;
+  color: #b4cded;
 }
 
 html {
@@ -22,8 +22,8 @@ html {
 
 * {
   font-family: consolas;
-  background-color: #22272e;
-  color: #dcddde;
+  background-color: #0d1821;
+  color: #b4cded;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -58,23 +58,23 @@
 }
 
 .sortbutton {
-  background-color: #dcddde;
+  background-color: #b4cded;
   border-radius: 5px;
-  color: #22272e;
+  color: #0d1821;
   border: none;
   margin: 10px;
   padding: 10px;
   cursor: crosshair;
   font-size: 15px;
-  color: #22272e;
-  background-color: #dcddde;
+  color: #0d1821;
+  background-color: #b4cded;
   transition: font-size 1s, color 0.5s, background-color 0.5s;
 }
 
 .sortbutton:hover {
   font-size: 20px;
-  color: #dcddde;
-  background-color: #22272e;
+  color: #b4cded;
+  background-color: #0d1821;
   transition: font-size 1s, color 0.5s, background-color 0.5s;
 }
 
