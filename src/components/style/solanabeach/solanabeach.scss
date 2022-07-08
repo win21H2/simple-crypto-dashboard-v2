@@ -1,4 +1,4 @@
-$primary-color: #b4cded;
+$primary-color: #dcddde;
 $secondary-color: #0d1821;
 $tertiary-color: #515052;
 $width-200px: 200px;
@@ -27,4 +27,8 @@ table, th, td {
     display: grid;
     justify-content: $align;
     align-items: $align;
+}
+.solanabeach-align {
+    display: grid;
+    justify-content: $align;
 }

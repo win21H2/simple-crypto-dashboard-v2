@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Coin from "./Coin";
 import axios from "axios";
 import SolanaBeachWalletFormat from "./SolanaBeachWalletFormat";
+import MeritCircle from "./MeritCircle";
 
 const CoinFormat = () => {
     const [coins, setCoins] = useState([]);
@@ -45,7 +46,7 @@ const CoinFormat = () => {
                 <div id="COIN--PRICES">
                 <div className="coin-search">
                     <div className="coin-HTLLTH">
-                        <h4>filter</h4>
+                        <h1>coin prices</h1>
                         <pre>
                             <button onClick={HTLprice} className="sortbutton">high to low (price $USD)</button><br/>
                             <button onClick={LTHprice} className="sortbutton">low to high (price $USD)</button>
@@ -75,13 +76,8 @@ const CoinFormat = () => {
                             <SolanaBeachWalletFormat />
                         </div>
                     </div>
-                    <br/><br/>
                 </div>
-                <div id="MERIT-CIRCLE">
-                    <center>
-                        <iframe src="https://treasury.meritcircle.io/" title="treasury" width="100%" height="1325px" scrolling="no" className="treasury--display"></iframe>
-                    </center>
-                </div>
+                <MeritCircle />
             </div>
         </div>
     )

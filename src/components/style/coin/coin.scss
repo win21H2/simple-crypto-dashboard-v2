@@ -1,4 +1,4 @@
-$primary-color: #b4cded;
+$primary-color: #dcddde;
 $secondary-color: #0d1821;
 $tertiary-color: #515052;
 $crypto-positive-color: #588157;
@@ -20,12 +20,6 @@ $transition-05s: 0.5s;
     width: $size-50px;
     margin-bottom: 20px;
     cursor: $cursor-crosshair;
-    transition: $transtion-1s;
-}
-.coin img:hover {
-  height: 75px;
-  width: 75px;
-  transition: $transtion-1s;
 }
 .coin-data {
     display: grid;

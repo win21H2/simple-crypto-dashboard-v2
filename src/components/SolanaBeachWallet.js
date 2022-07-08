@@ -13,14 +13,12 @@ const SolanaBeachWallet = ({ apr, epoch, amount, effectiveSlot, postBalance }) =
   return (
     <>
     <div className="solanabeach-wallet">
-      <pre>
-        <center>
+      <pre className="solanabeach-align">
           <th> epoch: {epoch} </th><br/>
           <th> amount: {amountnewnew} SOL </th><br/>
           <th> new balance: {postBalancenewnew} SOL </th><br/>
           <th> apr: {aprnew}% </th><br/>
-          <th> reward slot: {effectiveSlotnew} </th><br/>
-        </center>
+          <th> reward slot: {effectiveSlotnew} </th>
       </pre>
     </div>
     <br/>

@@ -25,4 +25,9 @@ table, th, td {
   align-items: center;
 }
 
+.solanabeach-align {
+  display: grid;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=solanabeach.css.map */
