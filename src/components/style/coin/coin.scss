@@ -12,6 +12,7 @@ $align: center;
 $transtion-1s: 1s;
 $transition-05s: 0.5s;
 
+.middefault { color: $primary-color; }
 .red, .coin-low24h, .midfalse { color: $crypto-negative-color; }
 .green, .coin-high24h, .midtrue { color: $crypto-positive-color; }
 .treasury--display { border-radius: $border-radius-5px; }

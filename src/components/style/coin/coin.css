@@ -1,3 +1,7 @@
+.middefault {
+  color: #dcddde;
+}
+
 .red, .coin-low24h, .midfalse {
   color: #ba1200;
 }
