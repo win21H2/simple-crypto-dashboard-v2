@@ -1,8 +1,8 @@
-.red, .coin-low24h {
+.red, .coin-low24h, .midfalse {
   color: #ba1200;
 }
 
-.green, .coin-high24h {
+.green, .coin-high24h, .midtrue {
   color: #588157;
 }
 
