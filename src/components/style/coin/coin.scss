@@ -84,4 +84,10 @@ a { cursor: $cursor-crosshair; }
   color: $primary-color;
   background-color: $secondary-color;
   transition: color 0.5s, background-color 0.5s;
+  .refresh::after {
+    content: " ↻";
+    text-emphasis: bold;
+    color: $primary-color;
+    transition: color 0.5s, background-color 0.5s;
+  }
 }

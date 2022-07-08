@@ -44,9 +44,9 @@ const CoinFormat = () => {
                     <div className="coin-HTLLTH">
                         <h1>coin prices</h1>
                         <pre>
-                            <button onClick={HTLprice} className="sortbutton">high to low (price $USD)</button><br/>
-                            <button onClick={LTHprice} className="sortbutton">low to high (price $USD)</button><br/>
-                            <button onClick={REFRESHdata} className="sortbutton">refresh data</button>
+                            <button onClick={HTLprice} className="sortbutton">-- high to low (price $USD) --</button><br/>
+                            <button onClick={LTHprice} className="sortbutton">-- low to high (price $USD) --</button><br/>
+                            <button onClick={REFRESHdata} className="sortbutton">-- refresh data<span className="refresh"></span> --</button>
                         </pre>
                     </div>
                     <div className="coin-boundbox">
