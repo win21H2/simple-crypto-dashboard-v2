@@ -1,22 +1,16 @@
 $font-stack: consolas;
-$primary-color: #63e0ce;
+$primary-color: #7c7c7c;
 $secondary-color: #262626;
-$tertiary-color: #313131;
-$cursor-crosshair: crosshair;
 
 body { background-color: $secondary-color; }
+html { cursor: crosshair; }
+.centered { text-align: center; }
 ::-webkit-scrollbar { display: none; }
-.cursor-crosshair { cursor: $cursor-crosshair; }
 h1, h3, p {
   font-family: $font-stack;
   color: $primary-color;
 }
-html {
-    cursor: $cursor-crosshair;
-    font-family: $font-stack;
-}
 * {
     font-family: $font-stack;
-    background-color: $secondary-color;
     color: $primary-color;
 }

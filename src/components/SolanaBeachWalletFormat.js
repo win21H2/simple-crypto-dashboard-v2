@@ -13,7 +13,7 @@ const SolanaBeachWalletFormat = () => {
             .catch((err) => { console.log(err); });
     }, []);
 
-    const filteredSOL = sol.filter((sol) => { return sol; });
+    const filteredSOL = sol.filter((sol) => {return sol;});
 
     return (
         <div>

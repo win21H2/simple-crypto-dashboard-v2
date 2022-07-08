@@ -1,24 +1,40 @@
-.middefault {
-  color: #7c7c7c;
-}
-
-.red, .coin-low24h, .midfalse {
-  color: #ba1200;
-}
-
-.green, .coin-high24h, .midtrue {
-  color: #588157;
-}
-
 .treasury--display {
   border-radius: 5px;
+}
+
+a {
+  cursor: crosshair;
 }
 
 .coin img {
   height: 50px;
   width: 50px;
-  margin-bottom: 20px;
   cursor: crosshair;
+  border-radius: 5px;
+}
+
+.coincard-regred {
+  color: #d74d3e;
+}
+.coincard-reggreen {
+  color: #58a257;
+}
+.coincard-red {
+  color: #d74d3e;
+  border: 1px solid #d74d3e;
+  border-radius: 5px;
+  padding: 10px;
+}
+.coincard-green {
+  color: #58a257;
+  border: 1px solid #58a257;
+  border-radius: 5px;
+  padding: 10px;
+}
+.coincard-regular {
+  border: 1px solid #7c7c7c;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .coin-data {
@@ -29,7 +45,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
 .coin-format {
   width: 30%;
   display: inline-block;
@@ -39,13 +54,11 @@
   align-items: center;
   border-radius: 5px;
 }
-
 .coin-container {
   display: grid;
   justify-content: center;
   align-items: center;
 }
-
 .coin-HTLLTH {
   border-radius: 5px;
   text-align: center;
@@ -57,7 +70,6 @@
 .sortbutton {
   background-color: #7c7c7c;
   border-radius: 5px;
-  color: rgba(255, 255, 255, 0.8);
   border: none;
   margin: 10px;
   padding: 10px;
@@ -65,14 +77,13 @@
   font-size: 15px;
   color: #262626;
   background-color: #7c7c7c;
-  transition: font-size 1s, color 0.5s, background-color 0.5s;
+  transition: color 0.5s, background-color 0.5s;
 }
 
 .sortbutton:hover {
-  font-size: 20px;
   color: #7c7c7c;
   background-color: #262626;
-  transition: font-size 1s, color 0.5s, background-color 0.5s;
+  transition: color 0.5s, background-color 0.5s;
 }
 
 /*# sourceMappingURL=coin.css.map */

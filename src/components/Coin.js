@@ -4,6 +4,7 @@ const Coin = ({ image, symbol, price, priceChange, high24h, low24h, name }) => {
 
   const high24hnew = high24h.toFixed(2);
   const low24hnew = low24h.toFixed(2);
+  const pricenew = price.toFixed(2);
 
   return (
     <>
@@ -12,15 +13,18 @@ const Coin = ({ image, symbol, price, priceChange, high24h, low24h, name }) => {
         <div className="coin-format">
           <div className="coin-data">
             <pre>
-              <div className="coin">
-                <a href={image} target="_blank" rel="noreferrer" id="coin-imageborder" className=""><img src={image} alt=""/></a><br/>
+              <div className="coincard-regular">
+                <br/>
+                <div className="coin">
+                  <a href={image} target="_blank" rel="noreferrer" className=""><img src={image} alt=""/></a><br/>
+                </div>
+                <h4><b>symbol: {symbol}</b></h4>
+                <h4><b>name: {name}</b></h4>
+                <h4><b>price: ${pricenew}<sub>USD</sub></b></h4>
               </div>
-              <div className="coin-symbol">symbol: <b>{symbol}</b></div>
-              <div className="coin-name">name: <b>{name}</b></div>
-              <p>price: ${price} USD</p>
-              <p className="coin-high24h">high (24h): ${high24hnew} USD</p>
-              <p className="coin-low24h">low (24h): ${low24hnew} USD</p>
-              {priceChange < 0 ? (<p className="coin-percent red">change (24h): {priceChange.toFixed(2)}%</p>):(<p className="coin-percent green">Change (24h): {priceChange.toFixed(2)}%</p>)}
+              <p className="coincard-green">&uarr; high (24h): ${high24hnew}<sub className="coincard-reggreen">USD</sub></p>
+              <p className="coincard-red">&darr; low (24h): ${low24hnew}<sub className="coincard-regred">USD</sub></p>
+              {priceChange < 0 ? (<p className="coin-percent coincard-red">&darr; change (24h): {priceChange.toFixed(2)}%</p>):(<p className="coin-percent coincard-green">&uarr; change (24h): {priceChange.toFixed(2)}%</p>)}
               <br/>
             </pre>
           </div>

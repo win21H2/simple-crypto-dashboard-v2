@@ -1,36 +1,52 @@
 $primary-color: #7c7c7c;
 $secondary-color: #262626;
 $tertiary-color: #313131;
-$crypto-positive-color: #588157;
-$crypto-negative-color: #ba1200;
-$width-200px: 200px;
+$crypto-positive-color: #58a257;
+$crypto-negative-color: #d74d3e;
 $cursor-crosshair: crosshair;
 $border-radius-5px: 5px;
-$size-50px: 50px;
 $size-10px: 10px;
 $align: center;
-$transtion-1s: 1s;
-$transition-05s: 0.5s;
 
-.middefault { color: $primary-color; }
-.red, .coin-low24h, .midfalse { color: $crypto-negative-color; }
-.green, .coin-high24h, .midtrue { color: $crypto-positive-color; }
 .treasury--display { border-radius: $border-radius-5px; }
+a { cursor: $cursor-crosshair; }
 .coin img {
-    height: $size-50px;
-    width: $size-50px;
-    margin-bottom: calc($size-10px + 10px);
+    height: calc($size-10px * 5);
+    width: calc($size-10px * 5);
     cursor: $cursor-crosshair;
+    border-radius: $border-radius-5px;
 }
-.coin-data {
+.coincard {
+  &-regred { color: $crypto-negative-color; }
+  &-reggreen { color: $crypto-positive-color; }
+  &-red {
+    color: $crypto-negative-color;
+    border: 1px solid $crypto-negative-color;
+    border-radius: $border-radius-5px;
+    padding: 10px;
+  }
+  &-green {
+    color: $crypto-positive-color;
+    border: 1px solid $crypto-positive-color;
+    border-radius: $border-radius-5px;
+    padding: 10px;
+  }
+  &-regular {
+    border: 1px solid $primary-color;
+    border-radius: $border-radius-5px;
+    padding: 10px;
+  }
+}
+.coin {
+  &-data {
     display: grid;
     align-content: $align;
     text-align: $align;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-}
-.coin-format {
+  }
+  &-format {
     width: 30%;
     display:inline-block;
     display: flex;
@@ -38,23 +54,23 @@ $transition-05s: 0.5s;
     display: flex;
     align-items: $align;
     border-radius: $border-radius-5px;
-}
-.coin-container {
+  }
+  &-container {
     display: grid;
     justify-content: $align;
     align-items: $align;
-}
-.coin-HTLLTH {
-  border-radius: $border-radius-5px;
-  text-align: $align;
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
+  }
+  &-HTLLTH {
+    border-radius: $border-radius-5px;
+    text-align: $align;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
 }
 .sortbutton {
   background-color: $primary-color;
   border-radius: $border-radius-5px;
-  color: rgba(255, 255, 255, 0.8);
   border: none;
   margin: $size-10px;
   padding: $size-10px;
@@ -62,11 +78,10 @@ $transition-05s: 0.5s;
   font-size: calc($size-10px + 5px);
   color: $secondary-color;
   background-color: $primary-color;
-  transition: font-size $transtion-1s, color $transition-05s, background-color $transition-05s;
+  transition: color 0.5s, background-color 0.5s;
 }
 .sortbutton:hover {
-  font-size: calc($size-10px + 10px);
   color: $primary-color;
   background-color: $secondary-color;
-  transition: font-size $transtion-1s, color $transition-05s, background-color $transition-05s;
+  transition: color 0.5s, background-color 0.5s;
 }

@@ -1,12 +1,4 @@
-.cursor-crosshair {
-  cursor: crosshair;
-}
-
-.centered {
-  text-align: center;
-}
-
-table, th, td {
+th {
   border: 1px dashed #7c7c7c;
   border-collapse: collapse;
   border-radius: 5px;
@@ -18,16 +10,19 @@ table, th, td {
   height: 100%;
   text-align: center;
 }
-
 .solanabeach-tablealign {
   display: grid;
   justify-content: center;
   align-items: center;
 }
-
 .solanabeach-align {
   display: grid;
   justify-content: center;
+}
+.solanabeach-border {
+  border: 1px solid #7c7c7c;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=solanabeach.css.map */

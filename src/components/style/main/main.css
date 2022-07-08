@@ -2,28 +2,26 @@ body {
   background-color: #262626;
 }
 
+html {
+  cursor: crosshair;
+}
+
+.centered {
+  text-align: center;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
 
-.cursor-crosshair {
-  cursor: crosshair;
-}
-
 h1, h3, p {
   font-family: consolas;
-  color: #63e0ce;
-}
-
-html {
-  cursor: crosshair;
-  font-family: consolas;
+  color: #7c7c7c;
 }
 
 * {
   font-family: consolas;
-  background-color: #262626;
-  color: #63e0ce;
+  color: #7c7c7c;
 }
 
 /*# sourceMappingURL=main.css.map */

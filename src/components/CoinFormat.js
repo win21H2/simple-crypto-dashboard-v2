@@ -28,11 +28,11 @@ const CoinFormat = () => {
     });
 
     const HTLprice = () => {
-        const sortedCoins = filteredCoins.sort((a, b) => { return b.current_price - a.current_price; });
+        const sortedCoins = filteredCoins.sort((a, b) => {return b.current_price - a.current_price;});
         setCoins(sortedCoins);
     };
     const LTHprice = () => {
-        const sortedCoins = filteredCoins.sort((a, b) => { return a.current_price - b.current_price; });
+        const sortedCoins = filteredCoins.sort((a, b) => {return a.current_price - b.current_price;});
         setCoins(sortedCoins);
     };
     
