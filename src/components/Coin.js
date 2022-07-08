@@ -9,6 +9,35 @@ const Coin = ({ image, symbol, price, priceChange, high24h, low24h, name, totals
   const totalsupplynew = totalsupply.toLocaleString('en-US', {maximumFractionDigits: 2});
   const circsupplynew = circsupply.toLocaleString('en-US', {maximumFractionDigits: 2});
 
+  const testcalc = (high24h + low24h) / 2;
+  const midpointcalc = symbol + " midpoint: " + testcalc;
+
+  const midpointcalcnewhigh = (high24h + low24h) / 2 + 10;
+  const midpointcalcnewlow = (high24h + low24h) / 2 - 10;
+  
+  const midpointcalcnew = () => {
+    if (price < midpointcalcnewhigh && price > midpointcalcnewlow) {
+      console.log("high");
+    } else {
+      console.log("low");
+    }
+  };
+
+  console.log("new midpointhigh calc: " + midpointcalcnewhigh);
+  console.log(midpointcalc);
+  console.log("new midpointlow calc: " + midpointcalcnewlow);
+
+
+  const isinrangeofmid = () => {
+    if (price > (midpointcalc - 100) || price < (midpointcalc + 100)) {
+      //console.log(symbol + " midpointISTRUE");
+    } else {
+      //console.log(symbol + " midpointISFALSE");
+    }
+  }
+  isinrangeofmid();
+  midpointcalcnew();
+
   return (
     <>
     <div id="CRYPTO--CURRENT">
@@ -25,11 +54,8 @@ const Coin = ({ image, symbol, price, priceChange, high24h, low24h, name, totals
               price = {pricenew}
               high24h = {high24hnew}
               low24h = {low24hnew}
+              symbol = {symbol}
             />
-            {/*
-            compare if the price is in between the mid point and up to high24hnew = GREEN
-            compare if the price is in between the mid point and down to low24hnew = RED
-            */}
             {priceChange < 0 ? (<p className="coin-percent red">change (24h): {priceChange.toFixed(2)}%</p>) : (<p className="coin-percent green">Change (24h): {priceChange.toFixed(2)}%</p>)}
             <p className="">total supply: {totalsupplynew}</p>
             <p className="">circulating supply: {circsupplynew}</p>

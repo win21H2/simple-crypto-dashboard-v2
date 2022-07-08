@@ -2,21 +2,22 @@ import React, { useState, useEffect } from "react";
 import Coin from "./Coin";
 import axios from "axios";
 import SolanaBeachWalletFormat from "./SolanaBeachWalletFormat";
-import MeritCircle from "./MeritCircle";
 
 const CoinFormat = () => {
     const [coins, setCoins] = useState([]);
 
     useEffect(() => {
-    axios
-        .get( "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false" )
-        .then((res) => {
-            setCoins(res.data);
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+        axios
+            .get( "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false" )
+            .then((res) => { setCoins(res.data); })
+            .catch((err) => { console.log(err); });
     }, []);
+    const REFRESHdata = () => {
+        axios
+            .get( "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false" )
+            .then((res) => { setCoins(res.data); })
+            .catch((err) => { console.log(err); });
+    };
 
     // eslint-disable-next-line
     const filteredCoins = coins.filter((coin) => {
@@ -34,12 +35,14 @@ const CoinFormat = () => {
         const sortedCoins = filteredCoins.sort((a, b) => { return a.current_price - b.current_price; });
         setCoins(sortedCoins);
     };
+
     /*
     NOTES:
      - Try to make drop-down menus for the coins
      - Try to make the current price color reflect the low and high values compared to the current price
      - Show the converted rate from SOL to USD (this feature might get implemented later due to cross files)
     */
+
     return (
         <div>
             <div className="coin-app">
@@ -49,7 +52,8 @@ const CoinFormat = () => {
                         <h1>coin prices</h1>
                         <pre>
                             <button onClick={HTLprice} className="sortbutton">high to low (price $USD)</button><br/>
-                            <button onClick={LTHprice} className="sortbutton">low to high (price $USD)</button>
+                            <button onClick={LTHprice} className="sortbutton">low to high (price $USD)</button><br/>
+                            <button onClick={REFRESHdata} className="sortbutton">refresh data</button>
                         </pre>
                     </div>
                     <div className="coin-boundbox">
@@ -77,7 +81,12 @@ const CoinFormat = () => {
                         </div>
                     </div>
                 </div>
-                <MeritCircle />
+                <div id="MERIT-CIRCLE">
+                    <center>
+                        <h1 align="center">merit circle DAO treasury</h1>
+                        <iframe src="https://treasury.meritcircle.io/" title="treasury" width="100%" height="1325px" scrolling="no" className="treasury--display"></iframe>
+                    </center>
+                </div>
             </div>
         </div>
     )

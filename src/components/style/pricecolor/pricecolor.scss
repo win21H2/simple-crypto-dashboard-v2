@@ -16,6 +16,8 @@ $transition-05s: 0.5s;
 .contgreen { color: $crypto-positive-color; }
 .contred { color: $crypto-negative-color; }
 .contyellow {color: $crypto-medium-color; }
+.contwhite { color: $primary-color; }
+
 .red, .coin-low24h { color: $crypto-negative-color; }
 .green, .coin-high24h { color: $crypto-positive-color; }
 .high24h { color: $crypto-positive-color; }
