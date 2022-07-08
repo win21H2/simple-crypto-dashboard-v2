@@ -57,7 +57,7 @@
 .sortbutton {
   background-color: #dcddde;
   border-radius: 5px;
-  color: #0d1821;
+  color: rgba(255, 255, 255, 0.8);
   border: none;
   margin: 10px;
   padding: 10px;

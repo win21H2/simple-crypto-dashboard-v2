@@ -28,7 +28,6 @@ const SolanaBeachWalletFormat = () => {
                                 apr={sol.apr}
                                 epoch={sol.epoch}
                                 amount={sol.amount}
-                                effectiveSlot={sol.effectiveSlot}
                                 postBalance={sol.postBalance}
                             />
                             </>

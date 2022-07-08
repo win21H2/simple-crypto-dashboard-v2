@@ -42,7 +42,6 @@ const CoinFormat = () => {
      - Try to make the current price color reflect the low and high values compared to the current price
      - Show the converted rate from SOL to USD (this feature might get implemented later due to cross files)
     */
-
     return (
         <div>
             <div className="coin-app">
