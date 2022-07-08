@@ -1,5 +1,4 @@
 import React from "react";
-import PriceColorGradient from "./PriceColorGradient";
 
 const Coin = ({ image, symbol, price, priceChange, high24h, low24h, name, totalsupply, circsupply }) => {
 
@@ -9,34 +8,19 @@ const Coin = ({ image, symbol, price, priceChange, high24h, low24h, name, totals
   const totalsupplynew = totalsupply.toLocaleString('en-US', {maximumFractionDigits: 2});
   const circsupplynew = circsupply.toLocaleString('en-US', {maximumFractionDigits: 2});
 
-  const testcalc = (high24h + low24h) / 2;
-  const midpointcalc = symbol + " midpoint: " + testcalc;
+  // const testcalc = (high24h + low24h) / 2;
+  // const midpointcalc = symbol + " midpoint: " + testcalc;
 
-  const midpointcalcnewhigh = (high24h + low24h) / 2 + 10;
-  const midpointcalcnewlow = (high24h + low24h) / 2 - 10;
-  
-  const midpointcalcnew = () => {
-    if (price < midpointcalcnewhigh && price > midpointcalcnewlow) {
-      console.log("high");
-    } else {
-      console.log("low");
-    }
-  };
+  // const midpointcalcnew = () => {
+  //   if (price === (midpointcalc + 10) || price === (midpointcalc - 10)) {
+  //     console.log("high");
+  //   } else {
+  //     console.log("low");
+  //   }
+  // };
 
-  console.log("new midpointhigh calc: " + midpointcalcnewhigh);
-  console.log(midpointcalc);
-  console.log("new midpointlow calc: " + midpointcalcnewlow);
-
-
-  const isinrangeofmid = () => {
-    if (price > (midpointcalc - 100) || price < (midpointcalc + 100)) {
-      //console.log(symbol + " midpointISTRUE");
-    } else {
-      //console.log(symbol + " midpointISFALSE");
-    }
-  }
-  isinrangeofmid();
-  midpointcalcnew();
+  // console.log(midpointcalc);
+  // midpointcalcnew();
 
   return (
     <>
@@ -50,12 +34,9 @@ const Coin = ({ image, symbol, price, priceChange, high24h, low24h, name, totals
             </div>
             <div className="coin-symbol">symbol: <b>{symbol}</b></div>
             <div className="coin-name">name: <b>{name}</b></div>
-            <PriceColorGradient 
-              price = {pricenew}
-              high24h = {high24hnew}
-              low24h = {low24hnew}
-              symbol = {symbol}
-            />
+            <p className="coin-price">price: ${pricenew}</p>
+            <p className="coin-high24h">high (24h): ${high24hnew}</p>
+            <p className="coin-low24h">low (24h): ${low24hnew}</p>
             {priceChange < 0 ? (<p className="coin-percent red">change (24h): {priceChange.toFixed(2)}%</p>) : (<p className="coin-percent green">Change (24h): {priceChange.toFixed(2)}%</p>)}
             <p className="">total supply: {totalsupplynew}</p>
             <p className="">circulating supply: {circsupplynew}</p>
