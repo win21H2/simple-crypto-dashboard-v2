@@ -15,10 +15,14 @@ a { cursor: $cursor-crosshair; }
     width: calc($size-10px * 5);
     cursor: $cursor-crosshair;
     border-radius: $border-radius-5px;
+    transition: all 0.5s;
+}
+.coin img:hover {
+  height: calc($size-10px * 6);
+  width: calc($size-10px * 6);
+  transition: all 0.5s;
 }
 .coincard {
-  &-regred { color: $crypto-negative-color; }
-  &-reggreen { color: $crypto-positive-color; }
   &-red {
     color: $crypto-negative-color;
     border: 1px solid $crypto-negative-color;
@@ -35,6 +39,8 @@ a { cursor: $cursor-crosshair; }
     border: 1px solid $primary-color;
     border-radius: $border-radius-5px;
     padding: 10px;
+    transition-duration: 1s;
+    transition-property: all;
   }
 }
 .coin {
@@ -50,7 +56,7 @@ a { cursor: $cursor-crosshair; }
     width: 30%;
     display:inline-block;
     display: flex;
-    font-size: calc($size-10px + 5px);
+    font-size: 15px;
     display: flex;
     align-items: $align;
     border-radius: $border-radius-5px;
@@ -75,7 +81,7 @@ a { cursor: $cursor-crosshair; }
   margin: $size-10px;
   padding: $size-10px;
   cursor: $cursor-crosshair;
-  font-size: calc($size-10px + 5px);
+  font-size: 15px;
   color: $secondary-color;
   background-color: $primary-color;
   transition: color 0.5s, background-color 0.5s;
@@ -85,7 +91,7 @@ a { cursor: $cursor-crosshair; }
   background-color: $secondary-color;
   transition: color 0.5s, background-color 0.5s;
   .refresh::after {
-    content: " ↻";
+    content: " ↻ ";
     text-emphasis: bold;
     color: $primary-color;
     transition: color 0.5s, background-color 0.5s;

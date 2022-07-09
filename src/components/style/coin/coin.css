@@ -12,14 +12,15 @@ a {
   width: 50px;
   cursor: crosshair;
   border-radius: 5px;
+  transition: all 0.5s;
 }
 
-.coincard-regred {
-  color: #d74d3e;
+.coin img:hover {
+  height: 60px;
+  width: 60px;
+  transition: all 0.5s;
 }
-.coincard-reggreen {
-  color: #58a257;
-}
+
 .coincard-red {
   color: #d74d3e;
   border: 1px solid #d74d3e;
@@ -36,6 +37,8 @@ a {
   border: 1px solid #7c7c7c;
   border-radius: 5px;
   padding: 10px;
+  transition-duration: 1s;
+  transition-property: all;
 }
 
 .coin-data {
@@ -87,7 +90,7 @@ a {
   transition: color 0.5s, background-color 0.5s;
 }
 .sortbutton:hover .refresh::after {
-  content: " ↻";
+  content: " ↻ ";
   text-emphasis: bold;
   color: #7c7c7c;
   transition: color 0.5s, background-color 0.5s;

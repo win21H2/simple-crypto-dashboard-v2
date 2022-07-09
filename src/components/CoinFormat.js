@@ -42,11 +42,12 @@ const CoinFormat = () => {
                 <div id="COIN--PRICES">
                 <div className="coin-search">
                     <div className="coin-HTLLTH">
-                        <h1>coin prices</h1>
+                        <h1>coin prices</h1><br/>
                         <pre>
+                            <h5>filter</h5>
                             <button onClick={HTLprice} className="sortbutton">-- high to low (price $USD) --</button><br/>
                             <button onClick={LTHprice} className="sortbutton">-- low to high (price $USD) --</button><br/>
-                            <button onClick={REFRESHdata} className="sortbutton">-- refresh data<span className="refresh"></span> --</button>
+                            <button onClick={REFRESHdata} className="sortbutton">-- <span className="refresh"></span>refresh data<span className="refresh"></span> --</button>
                         </pre>
                     </div>
                     <div className="coin-boundbox">
@@ -54,7 +55,6 @@ const CoinFormat = () => {
                             return (
                                 <>
                                 <Coin
-                                    key={coin.id}
                                     name={coin.name}
                                     image={coin.image}
                                     symbol={coin.symbol}
@@ -62,8 +62,6 @@ const CoinFormat = () => {
                                     priceChange={coin.price_change_percentage_24h}
                                     high24h={coin.high_24h}
                                     low24h={coin.low_24h}
-                                    totalsupply={coin.total_supply}
-                                    circsupply={coin.circulating_supply}
                                 />
                                 </>
                             );

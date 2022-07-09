@@ -19,7 +19,7 @@ const SolanaBeachWalletFormat = () => {
         <div>
             <div className="solanabeach-centeralign">
                 <h1>solana wallet</h1>
-                <a className="cursor-crosshair" href="https://solanabeach.io/address/CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu"><h5>wallet address: CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu</h5></a>
+                <h5><a className="cursor-crosshair" href="https://solanabeach.io/address/CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu">CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu</a></h5>
                 <div className="solanabeach-tablealign">
                     {filteredSOL.map((sol) => {
                         return (
