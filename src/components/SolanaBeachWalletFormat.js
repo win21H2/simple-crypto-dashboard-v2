@@ -8,7 +8,7 @@ const SolanaBeachWalletFormat = () => {
 
     useEffect(() => {
         axios
-            .get("https://public-api.solanabeach.io/v1/account/CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu/stake-rewards?")
+            .get("https://cosimo-api.herokuapp.com/api/v1/satoshi_sol_staking?api_key=aSmBpNbftAU0RZAkzXthU5lCIJHHNqGd&order_by=epoch&order=desc&filter_by=address&filter_by_value=CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu")
             .then((res) => { setSol(res.data); })
             .catch((err) => { console.log(err); });
     }, []);
@@ -31,7 +31,7 @@ const SolanaBeachWalletFormat = () => {
                                 apr={sol.apr}
                                 epoch={sol.epoch}
                                 amount={sol.amount}
-                                postBalance={sol.postBalance}
+                                new_balance={sol.new_balance}
                             />
                             </>
                         );
