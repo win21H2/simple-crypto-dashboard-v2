@@ -15,10 +15,13 @@ const SolanaBeachWalletFormat = () => {
 
     const filteredSOL = sol.filter((sol) => {return sol;});
 
+    if (filteredSOL.length === 0) {
+        return <h1 className="solanabeach-align solanabeach-notavailable">No data available!</h1>;
+    };
+
     return (
         <div>
             <div className="solanabeach-centeralign">
-                <h1>solana wallet</h1>
                 <h5><a className="cursor-crosshair" href="https://solanabeach.io/address/CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu">CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu</a></h5>
                 <div className="solanabeach-tablealign">
                     {filteredSOL.map((sol) => {

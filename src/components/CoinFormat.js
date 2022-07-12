@@ -68,6 +68,7 @@ const CoinFormat = () => {
                         })}
                         </div>
                         <div id="SOLANA--WALLET">
+                            <h1 align="center">solana wallet</h1>
                             <SolanaBeachWalletFormat />
                         </div>
                     </div>

@@ -1,4 +1,5 @@
 $primary-color: #7c7c7c;
+$crypto-negative-color: #d74d3e;
 $border-radius-5px: 5px;
 $align: center;
 
@@ -27,5 +28,9 @@ th {
         border: 1px solid $primary-color;
         padding: 10px;
         border-radius: $border-radius-5px;
+    }
+    &-notavailable {
+        color: $crypto-negative-color;
+        font-weight: bold;
     }
 }

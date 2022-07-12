@@ -24,5 +24,9 @@ th {
   padding: 10px;
   border-radius: 5px;
 }
+.solanabeach-notavailable {
+  color: #d74d3e;
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=solanabeach.css.map */
