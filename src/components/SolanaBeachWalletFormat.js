@@ -15,33 +15,31 @@ const SolanaBeachWalletFormat = () => {
     }, []);
 
     const filteredSOL = sol.filter((sol) => {return sol;});
-
-    if (filteredSOL.length === 0) {
-        return <h1 className="solanabeach-align solanabeach-notavailable">No data available!</h1>;
-    };
+    if (filteredSOL.length === 0) {return <h1 className="solanabeach-align solanabeach-notavailable">Loading data.....</h1>;};
 
     return (
         <>
             <nav className="navbar">
                 <Link to="/" className="navbar">Home</Link>
             </nav>
-            <div className="solanabeach-centeralign">
-                <h5><a className="cursor-crosshair" href="https://solanabeach.io/address/CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu">CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu</a></h5>
-                <div className="solanabeach-tablealign">
-                    {filteredSOL.map((sol) => {
-                        return (
-                            <>
-                            <SolanaBeachWallet
-                                apr={sol.apr}
-                                epoch={sol.epoch}
-                                amount={sol.amount}
-                                new_balance={sol.new_balance}
-                            />
-                            </>
-                        );
-                    })}
-                </div>
+            
+            <div className="solanabeach-align">
+                {filteredSOL.map((sol) => {
+                    return (
+                        <>
+                        <div classname="solanabeach-align">
+                        <SolanaBeachWallet
+                            apr={sol.apr}
+                            epoch={sol.epoch}
+                            amount={sol.amount}
+                            new_balance={sol.new_balance}
+                        />
+                        </div>
+                        </>
+                    );
+                })}
             </div>
+
         </>
     );
   };

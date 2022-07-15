@@ -10,14 +10,19 @@ body {
   display: none;
 }
 
-h1, h3, p {
+h1, h4, p {
   font-family: consolas;
   color: #7c7c7c;
+  text-align: center;
 }
 
 * {
   font-family: consolas;
   color: #7c7c7c;
+}
+
+.navbar {
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

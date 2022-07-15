@@ -9,10 +9,40 @@ const SolanaBeachWallet = ({ apr, epoch, amount, new_balance }) => {
   return (
     <>
     <div className="solanabeach-wallet">
-        <p className="solanabeach-border"> epoch: {epoch}</p>
-        <p className="solanabeach-border"> amount: {amountnew}<sub>sol</sub></p>
-        <p className="solanabeach-border"> new balance: {balancenew}<sub>sol</sub></p>
-        <p className="solanabeach-border"> apr: {apr}%</p><br/>
+      <table className="solanabeach-card">
+        <thead>
+          <th>
+            <td>
+              <h5>EPOCH</h5>
+            </td>
+            <td>
+              <h5>AMOUNT</h5>
+            </td>
+            <td>
+              <h5>BALANCE</h5>
+            </td>
+            <td>
+              <h5>APR</h5>
+            </td>
+          </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <pre className="style-color"> {epoch}</pre>
+            </td>
+            <td>
+              <pre className="style-color"> {amountnew} </pre>
+            </td>
+            <td>
+              <pre className="style-color"> {balancenew}</pre>
+            </td>
+            <td>
+              <pre className="style-color"> {apr}%</pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     </>
   );

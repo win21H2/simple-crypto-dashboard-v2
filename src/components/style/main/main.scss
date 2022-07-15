@@ -5,11 +5,15 @@ $secondary-color: #262626;
 body { background-color: $secondary-color; }
 .centered { text-align: center; }
 ::-webkit-scrollbar { display: none; }
-h1, h3, p {
+h1, h4, p {
   font-family: $font-stack;
   color: $primary-color;
+  text-align: center;
 }
 * {
     font-family: $font-stack;
     color: $primary-color;
+}
+.navbar {
+  text-align: center;
 }

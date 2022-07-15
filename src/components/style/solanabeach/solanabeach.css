@@ -1,32 +1,39 @@
-th {
-  border: 1px dashed #7c7c7c;
-  border-collapse: collapse;
-  border-radius: 5px;
-}
-
-.solanabeach-centeralign {
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
+.solanabeach-walletstyle {
+  color: #63e0ce;
   text-align: center;
-}
-.solanabeach-tablealign {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
-.solanabeach-align {
-  display: grid;
-  justify-content: center;
-}
-.solanabeach-border {
-  border: 1px solid #7c7c7c;
-  padding: 10px;
-  border-radius: 5px;
 }
 .solanabeach-notavailable {
   color: #d74d3e;
   font-weight: bold;
+}
+.solanabeach-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #313131;
+}
+.solanabeach-card-bottomfooter {
+  background-color: #313131;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.solanabeach-card-topfooter {
+  background-color: #313131;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.solanabeach-align {
+  padding-right: 30%;
+  padding-left: 30%;
+  max-width: 800px;
+}
+
+.style-color {
+  color: #dddddd;
+}
+
+.solanabeach-card td {
+  padding: 10px;
 }
 
 /*# sourceMappingURL=solanabeach.css.map */

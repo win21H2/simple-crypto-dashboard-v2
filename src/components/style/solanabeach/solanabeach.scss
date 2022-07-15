@@ -3,34 +3,43 @@ $crypto-negative-color: #d74d3e;
 $border-radius-5px: 5px;
 $align: center;
 
-th {
-    border: 1px dashed $primary-color;
-    border-collapse: collapse;
-    border-radius: 5px;
-}
 .solanabeach {
-    &-centeralign {
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
-        text-align: $align;
-    }
-    &-tablealign {
-        display: grid;
-        justify-content: $align;
-        align-items: $align;
-    }
-    &-align {
-        display: grid;
-        justify-content: $align;
-    }
-    &-border {
-        border: 1px solid $primary-color;
-        padding: 10px;
-        border-radius: $border-radius-5px;
+    &-walletstyle {
+        color: #63e0ce;
+        text-align: center;
     }
     &-notavailable {
         color: $crypto-negative-color;
         font-weight: bold;
     }
+    &-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #313131;
+    }
+    &-card-bottomfooter {
+        background-color: #313131;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    &-card-topfooter {
+        background-color: #313131;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+    &-align {
+        padding-right: 30%;
+        padding-left: 30%; 
+        max-width: 800px;
+    }
+}
+// html {
+//     padding-right: 30%;
+//     padding-left: 30%;
+// }
+.style-color {color: #dddddd;}
+
+.solanabeach-card td {
+    padding: 10px;
 }
