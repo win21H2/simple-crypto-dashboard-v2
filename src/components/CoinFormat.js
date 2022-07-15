@@ -46,13 +46,12 @@ const CoinFormat = () => {
     return (
         <>
             <nav className="navbar">
-                <Link to="/" className="navbar">Home</Link>
+                <Link to="/" className="navbar"><img src="https://www.bancassurances.ch/data/images/accroches/accrocheImmo.png" className="homebutton" alt=""/></Link>
             </nav>
             <div className="coin-app">
                 <div id="COIN--PRICES">
                 <div className="coin-search">
                     <div className="coin-HTLLTH">
-                        <h1>coin prices</h1><br/>
                         <pre>
                             <h5>filter</h5>
                             <button onClick={HTLprice} className="sortbutton">-- high to low (price $USD) --</button><br/>

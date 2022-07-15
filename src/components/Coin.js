@@ -22,7 +22,7 @@ const Coin = ({ image, symbol, price, priceChange, high24h, low24h, name }) => {
                 </div>
                 <h4><b>{symbol}</b></h4>
                 <h4><b>{name}</b></h4>
-                <h4><b>${pricenew} USD<sub>/per {symbol}</sub></b></h4>
+                <h4><b>${pricenew} USD<sub style={{color: "#7c7c7c"}}>/per {symbol}</sub></b></h4>
               </div>
               <p className="coincard-green">&uarr; high (24h): ${high24hnew} USD</p>
               <p className="coincard-red">&darr; low (24h): ${low24hnew} USD</p>

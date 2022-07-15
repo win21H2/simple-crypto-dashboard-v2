@@ -1,4 +1,12 @@
 @charset "UTF-8";
+html {
+  cursor: crosshair;
+}
+
+a {
+  cursor: crosshair;
+}
+
 .treasury--display {
   border-radius: 5px;
 }
@@ -34,6 +42,7 @@
   padding: 10px;
   transition-duration: 1s;
   transition-property: all;
+  max-width: 100%;
 }
 
 .coin-data {
@@ -76,6 +85,7 @@
   color: #262626;
   background-color: #7c7c7c;
   transition: color 0.5s, background-color 0.5s;
+  cursor: crosshair;
 }
 
 .sortbutton:hover {
@@ -88,6 +98,20 @@
   text-emphasis: bold;
   color: #7c7c7c;
   transition: color 0.5s, background-color 0.5s;
+}
+
+.homebutton {
+  width: 75px;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.homebutton:hover {
+  transition-duration: 0.5s;
+  box-shadow: rgb(0, 0, 0) 0px 15px 30px 0px;
 }
 
 /*# sourceMappingURL=coin.css.map */

@@ -1,6 +1,21 @@
+html {
+  cursor: crosshair;
+}
+
+a {
+  cursor: crosshair;
+}
+
+.solanabeach-card {
+  width: 100%;
+}
+.solanabeach-wallet {
+  border-radius: 20px;
+}
 .solanabeach-walletstyle {
   color: #63e0ce;
-  text-align: center;
+  font-weight: 1000;
+  text-decoration: none;
 }
 .solanabeach-notavailable {
   color: #d74d3e;
@@ -8,41 +23,57 @@
 }
 .solanabeach-wallet {
   text-align: center;
+  background-color: #313131;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 15px 30px 0px;
 }
-.solanabeach-align {
-  margin: 0 auto;
-  max-width: 80%;
-}
-.solanabeach-card {
-  width: 100%;
-}
-
-.style-color {
-  color: #dddddd;
-}
-
 .solanabeach-card td {
   padding: 10px;
-  background-color: #63e0ce;
+  border: 0;
 }
 
-th, td, table {
-  background-color: #FF0000;
+.table-title {
+  font-weight: 300;
+  color: #b3b3b3;
+}
+.table-maincolor {
+  color: #ffffff;
+  font-weight: 1000;
+}
+
+sub {
+  color: #ffffff;
+}
+
+tr:nth-of-type(even) {
+  background-color: #333333;
+}
+
+table {
   border-spacing: 0;
 }
 
-thead tr {
+thead {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
 
-th {
-  border-radius: 100px;
-}
-
-tfoot td {
+tfoot {
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+}
+
+.homebutton {
+  width: 75px;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.homebutton:hover {
+  transition-duration: 0.5s;
+  box-shadow: rgb(0, 0, 0) 0px 15px 30px 0px;
 }
 
 /*# sourceMappingURL=solanabeach.css.map */

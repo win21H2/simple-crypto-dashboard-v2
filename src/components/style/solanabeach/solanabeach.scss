@@ -1,12 +1,15 @@
-$primary-color: #7c7c7c;
 $crypto-negative-color: #d74d3e;
-$border-radius-5px: 5px;
-$align: center;
+$cursor-crosshair: crosshair;
 
+html {cursor: $cursor-crosshair;}
+a {cursor: $cursor-crosshair;}
 .solanabeach {
+    &-card {width: 100%;}
+    &-wallet {border-radius: 20px;}
     &-walletstyle {
         color: #63e0ce;
-        text-align: center;
+        font-weight: 1000;
+        text-decoration: none;
     }
     &-notavailable {
         color: $crypto-negative-color;
@@ -14,37 +17,41 @@ $align: center;
     }
     &-wallet {
         text-align: center;
+        background-color: #313131;
+        box-shadow: rgb(0 0 0 / 20%) 0px 15px 30px 0px;
     }
-    &-align {
-        margin: 0 auto;
-        max-width: 80%;
-    }
-    &-card {
-        width: 100%;
+    &-card td {
+        padding: 10px;
+        border: 0;
     }
 }
-.style-color {color: #dddddd;}
-
-.solanabeach-card td {
-    padding: 10px;
-    background-color: #63e0ce;
+.table {
+    &-title {font-weight: 300; color: #b3b3b3;}
+    &-maincolor {
+        color: #ffffff;
+        font-weight: 1000;
+    }
 }
-
-th, td, table {
-    background-color: #FF0000;
-    border-spacing: 0;
-    // border redius on top left and right
-    //border-radius: 100px;
-}
-thead tr {
+sub {color: #ffffff;}
+tr:nth-of-type(even) {background-color: #333333;}
+table {border-spacing: 0;}
+thead {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 }
-
-th {
-    border-radius: 100px;
-}
-tfoot td {
+tfoot {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+}
+.homebutton {
+    width: 75px;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+.homebutton:hover {
+    transition-duration: 0.5s;
+    box-shadow: rgb(0 0 0 / 100%) 0px 15px 30px 0px;
 }

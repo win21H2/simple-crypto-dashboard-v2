@@ -6,7 +6,10 @@ $crypto-negative-color: #d74d3e;
 $border-radius-5px: 5px;
 $size-10px: 10px;
 $align: center;
+$cursor-crosshair: crosshair;
 
+html {cursor: $cursor-crosshair;}
+a {cursor: $cursor-crosshair;}
 .treasury--display { border-radius: $border-radius-5px; }
 .coin img {
     height: calc($size-10px * 5);
@@ -38,6 +41,7 @@ $align: center;
     padding: 10px;
     transition-duration: 1s;
     transition-property: all;
+    max-width: 100%;
   }
 }
 .coin {
@@ -81,6 +85,7 @@ $align: center;
   color: $secondary-color;
   background-color: $primary-color;
   transition: color 0.5s, background-color 0.5s;
+  cursor: $cursor-crosshair;
 }
 .sortbutton:hover {
   color: $primary-color;
@@ -92,4 +97,16 @@ $align: center;
     color: $primary-color;
     transition: color 0.5s, background-color 0.5s;
   }
+}
+.homebutton {
+  width: 75px;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+.homebutton:hover {
+  transition-duration: 0.5s;
+  box-shadow: rgb(0 0 0 / 100%) 0px 15px 30px 0px;
 }

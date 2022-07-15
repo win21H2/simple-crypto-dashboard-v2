@@ -20,11 +20,12 @@ const SolanaBeachWalletFormat = () => {
     return (
         <>
             <nav className="navbar">
-                <Link to="/" className="navbar">Home</Link>
+                <Link to="/" className="navbar"><img src="https://www.bancassurances.ch/data/images/accroches/accrocheImmo.png" className="homebutton" alt=""/></Link>
             </nav>
-            <SolanaBeachWallet
-                filteredList={filteredSOL}
-            />
+            <center><br/>
+                <a className="solanabeach-walletstyle" href="https://solanabeach.io/address/CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu/stake-rewards">CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu</a>
+            </center><br/>
+            <SolanaBeachWallet filteredList={filteredSOL}/>
         </>
     );
   };
