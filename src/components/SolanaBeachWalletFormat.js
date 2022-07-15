@@ -22,24 +22,9 @@ const SolanaBeachWalletFormat = () => {
             <nav className="navbar">
                 <Link to="/" className="navbar">Home</Link>
             </nav>
-            
-            <div className="solanabeach-align">
-                {filteredSOL.map((sol) => {
-                    return (
-                        <>
-                        <div classname="solanabeach-align">
-                        <SolanaBeachWallet
-                            apr={sol.apr}
-                            epoch={sol.epoch}
-                            amount={sol.amount}
-                            new_balance={sol.new_balance}
-                        />
-                        </div>
-                        </>
-                    );
-                })}
-            </div>
-
+            <SolanaBeachWallet
+                filteredList={filteredSOL}
+            />
         </>
     );
   };

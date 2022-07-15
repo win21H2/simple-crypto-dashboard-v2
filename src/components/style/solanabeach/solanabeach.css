@@ -6,26 +6,15 @@
   color: #d74d3e;
   font-weight: bold;
 }
-.solanabeach-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #313131;
-}
-.solanabeach-card-bottomfooter {
-  background-color: #313131;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-.solanabeach-card-topfooter {
-  background-color: #313131;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+.solanabeach-wallet {
+  text-align: center;
 }
 .solanabeach-align {
-  padding-right: 30%;
-  padding-left: 30%;
-  max-width: 800px;
+  margin: 0 auto;
+  max-width: 80%;
+}
+.solanabeach-card {
+  width: 100%;
 }
 
 .style-color {
@@ -34,6 +23,11 @@
 
 .solanabeach-card td {
   padding: 10px;
+  background-color: #63e0ce;
+}
+
+th {
+  background-color: #FF0000;
 }
 
 /*# sourceMappingURL=solanabeach.css.map */
