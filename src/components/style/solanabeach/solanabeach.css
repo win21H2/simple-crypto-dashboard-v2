@@ -26,8 +26,22 @@
   background-color: #63e0ce;
 }
 
-th {
+th, td, table {
   background-color: #FF0000;
+  border-spacing: 0;
+}
+
+thead tr {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+th {
+  border-radius: 100px;
+}
+
+tfoot td {
+  border-radius: 100px;
 }
 
 /*# sourceMappingURL=solanabeach.css.map */

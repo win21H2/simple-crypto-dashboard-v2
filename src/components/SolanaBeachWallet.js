@@ -5,10 +5,10 @@ const SolanaBeachWallet = ({ filteredList }) => {
 
   return (
     <>
-      <div className="solanabeach-align">
-        <div className="solanabeach-wallet">
-          <table className="solanabeach-card">
-            <thead>
+      <div className="solanabeach-align" style={{borderRadius: "20px"}}>
+        <div className="solanabeach-wallet" style={{borderRadius: "20px"}}>
+          <table className="solanabeach-card" style={{borderRadius: "20px"}}>
+            <thead style={{borderRadius: "20px"}}>
               <tr>
                 <th>
                   <h5>EPOCH</h5>
@@ -44,6 +44,13 @@ const SolanaBeachWallet = ({ filteredList }) => {
                   );
                 })}
             </tbody>
+            <tfoot>
+              <tr>
+                <td colSpan={4}>
+                  &nbsp;
+                </td>
+                </tr>
+            </tfoot>    
           </table>
         </div>
       </div>
