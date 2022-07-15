@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SolanaBeachWallet from "./SolanaBeachWallet";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import "../components/style/solanabeach/solanabeach.css";
 
 const SolanaBeachWalletFormat = () => {
@@ -20,7 +21,10 @@ const SolanaBeachWalletFormat = () => {
     };
 
     return (
-        <div>
+        <>
+            <nav className="navbar">
+                <Link to="/" className="navbar">Home</Link>
+            </nav>
             <div className="solanabeach-centeralign">
                 <h5><a className="cursor-crosshair" href="https://solanabeach.io/address/CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu">CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu</a></h5>
                 <div className="solanabeach-tablealign">
@@ -38,7 +42,7 @@ const SolanaBeachWalletFormat = () => {
                     })}
                 </div>
             </div>
-        </div>
+        </>
     );
   };
   

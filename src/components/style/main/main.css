@@ -2,10 +2,6 @@ body {
   background-color: #262626;
 }
 
-html {
-  cursor: crosshair;
-}
-
 .centered {
   text-align: center;
 }

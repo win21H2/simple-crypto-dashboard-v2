@@ -12,10 +12,6 @@
             {
                 "match": ".*",
                 "cmd": "sass src/components/style/solanabeach/solanabeach.scss src/components/style/solanabeach/solanabeach.css"
-            },
-            {
-                "match": ".*",
-                "cmd": "sass src/components/style/pricecolor/pricecolor.scss src/components/style/pricecolor/pricecolor.css"
             }
         ]
     }

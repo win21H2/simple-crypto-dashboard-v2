@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Coin from "./Coin";
 import axios from "axios";
-import SolanaBeachWalletFormat from "./SolanaBeachWalletFormat";
+import { Link } from "react-router-dom";
+import "../components/style/coin/coin.css";
 
 const CoinFormat = () => {
     const [coins, setCoins] = useState([]);
@@ -13,6 +14,12 @@ const CoinFormat = () => {
             .catch((err) => { console.log(err); });
     }, []);
     const REFRESHdata = () => {
+        axios
+            .get( "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false" )
+            .then((res) => { setCoins(res.data); })
+            .catch((err) => { console.log(err); });
+    };
+    const RETURNprice = () => {
         axios
             .get( "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false" )
             .then((res) => { setCoins(res.data); })
@@ -37,7 +44,10 @@ const CoinFormat = () => {
     };
     
     return (
-        <div>
+        <>
+            <nav className="navbar">
+                <Link to="/" className="navbar">Home</Link>
+            </nav>
             <div className="coin-app">
                 <div id="COIN--PRICES">
                 <div className="coin-search">
@@ -47,6 +57,7 @@ const CoinFormat = () => {
                             <h5>filter</h5>
                             <button onClick={HTLprice} className="sortbutton">-- high to low (price $USD) --</button><br/>
                             <button onClick={LTHprice} className="sortbutton">-- low to high (price $USD) --</button><br/>
+                            <button onClick={RETURNprice} className="sortbutton">-- return to original --</button><br/>
                             <button onClick={REFRESHdata} className="sortbutton">-- <span className="refresh"></span>refresh data<span className="refresh"></span> --</button>
                         </pre>
                     </div>
@@ -67,20 +78,10 @@ const CoinFormat = () => {
                             );
                         })}
                         </div>
-                        <div id="SOLANA--WALLET">
-                            <h1 align="center">solana wallet</h1>
-                            <SolanaBeachWalletFormat />
-                        </div>
                     </div>
                 </div>
-                <div id="MERIT-CIRCLE">
-                    <center>
-                        <h1 align="center">merit circle DAO treasury</h1>
-                        <iframe src="https://treasury.meritcircle.io/" title="treasury" width="100%" height="1325px" scrolling="no" className="treasury--display"></iframe>
-                    </center>
-                </div>
             </div>
-        </div>
+        </>
     )
 };
 
