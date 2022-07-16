@@ -6,6 +6,7 @@ $cursor-crosshair: crosshair;
 html {cursor: $cursor-crosshair;}
 a {cursor: $cursor-crosshair;}
 body { background-color: $secondary-color; }
+.navbar {text-align: center;}
 .centered { text-align: center; }
 ::-webkit-scrollbar { display: none; }
 h1, h4, p {
@@ -17,29 +18,16 @@ h1, h4, p {
     font-family: $font-stack;
     color: $primary-color;
 }
-.navbar {
-  text-align: center;
+.icons-images {
+    width: 75px;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
-.navbarcard {
-  border-radius: 20px;
-  width: 10%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-}
-.icons {
-  width: 75px;
-  border-radius: 10px;
-  transition-duration: 0.5s;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-.icons:hover {
-  transition-duration: 0.5s;
-  box-shadow: rgb(0 0 0 / 100%) 0px 15px 30px 0px;
-}
-.navbarcard:hover {
+
+.icons-images:hover{
   transition-duration: 0.5s;
   box-shadow: rgb(0 0 0 / 100%) 0px 15px 30px 0px;
 }
