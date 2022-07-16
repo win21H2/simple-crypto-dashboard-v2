@@ -5,7 +5,7 @@ import CoinFormat from "./components/CoinMain/CoinFormat";
 import CoinMainPage from "./components/CoinMain/CoinMainPage";
 import AllCoinFormat from "./components/CoinMain/AllCoinFormat";
 import MeritCircle from "./components/MeritCircle";
-import SolanaBeachWalletFormat from "./components/SolanaBeachWalletFormat";
+import SolanaBeachWalletFormat from "./components/SolanaBeachMain/SolanaBeachWalletFormat";
 import ScrollButton from "./components/ScrollButton";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route path="components/CoinMain/CoinMainPage" element={<CoinMainPage />} />
         <Route path="components/CoinMain/AllCoinFormat" element={<AllCoinFormat />} />
         <Route path="components/MeritCircle" element={<MeritCircle />} />
-        <Route path="components/SolanaBeachWalletFormat" element={<SolanaBeachWalletFormat />} />
+        <Route path="components/SolanaBeachMain/SolanaBeachWalletFormat" element={<SolanaBeachWalletFormat />} />
       </Routes>
       <ScrollButton/>
     </>

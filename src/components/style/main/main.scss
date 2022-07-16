@@ -6,6 +6,7 @@ $cursor-crosshair: crosshair;
 html {cursor: $cursor-crosshair;}
 a {cursor: $cursor-crosshair;}
 body {background-color: $secondary-color;}
+.navbar {text-align: center;}
 .centered {text-align: center;}
 ::-webkit-scrollbar {display: none;}
 h1, h4, p {

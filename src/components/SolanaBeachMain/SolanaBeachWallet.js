@@ -1,8 +1,7 @@
 import React from "react";
-import "../components/style/solanabeach/solanabeach.css";
+import "../style/solanabeach/solanabeach.css";
 
 const SolanaBeachWallet = ({ filteredList }) => {
-
   return (
     <>
       <div className="solanabeach-align">

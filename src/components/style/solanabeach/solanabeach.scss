@@ -11,6 +11,9 @@ a {cursor: $cursor-crosshair;}
         font-weight: 1000;
         text-decoration: none;
     }
+    &-walletstyle-title {
+        font-weight: 1000;
+    }
     &-notavailable {
         color: $crypto-negative-color;
         font-weight: bold;
