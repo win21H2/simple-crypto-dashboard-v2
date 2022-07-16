@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Coin from "./Coin";
+import Coin from "../CoinMain/Coin";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "../components/style/coin/coin.css";
+import "../style/coin/coin.css";
 
 const CoinFormat = () => {
     const [coins, setCoins] = useState([]);

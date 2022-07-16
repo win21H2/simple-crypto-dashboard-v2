@@ -10,7 +10,7 @@ $cursor-crosshair: crosshair;
 
 html {cursor: $cursor-crosshair;}
 a {cursor: $cursor-crosshair;}
-.treasury--display { border-radius: $border-radius-5px; }
+.treasury--display {border-radius: $border-radius-5px;}
 .coin img {
     height: calc($size-10px * 5);
     width: calc($size-10px * 5);
