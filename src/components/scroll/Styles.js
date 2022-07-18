@@ -1,15 +1,13 @@
 import styled from 'styled-components';
   
 export const Heading = styled.h1`
-   text-align: right;
-   color: green;
+   text-align: center;
+   font-size: 3rem;
 `;
-  
 export const Content = styled.div`
    overflowY: scroll;
    height: 2500px;
 `;
-  
 export const Button = styled.div`
    position: fixed; 
    width: 100%;
@@ -22,4 +20,13 @@ export const Button = styled.div`
    cursor: pointer;
    color: green;
    cursor: crosshair;
+`
+export const Container = styled.div`
+   background-color: black;
+   height: 30px;
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   width: 100%;
 `

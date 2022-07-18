@@ -6,7 +6,7 @@ import CoinMainPage from "./components/CoinMain/CoinMainPage";
 import AllCoinFormat from "./components/CoinMain/AllCoinFormat";
 import MeritCircle from "./components/MeritCircle";
 import SolanaBeachWalletFormat from "./components/SolanaBeachMain/SolanaBeachWalletFormat";
-import ScrollButton from "./components/ScrollButton";
+import ScrollButton from "./components/scroll/ScrollButton";
 
 function App() {
   return (

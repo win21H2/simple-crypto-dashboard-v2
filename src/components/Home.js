@@ -9,15 +9,9 @@ function Home () {
     return (
         <>
             <nav className="navbar">
-                <Link to="/components/CoinMain/CoinMainPage">
-                    <CoinMainPageNav/>
-                </Link>
-                <Link to="/components/SolanaBeachMain/SolanaBeachWalletFormat">
-                    <SolanaBeachWalletFormatNav/>
-                </Link>
-                <Link to="/components/MeritCircle">
-                    <MeritCircleNav/>
-                </Link>
+                <Link to="/components/CoinMain/CoinMainPage"><CoinMainPageNav/></Link>
+                <Link to="/components/SolanaBeachMain/SolanaBeachWalletFormat"><SolanaBeachWalletFormatNav/></Link>
+                <Link to="/components/MeritCircle"><MeritCircleNav/></Link>
             </nav>
         </>
     )
