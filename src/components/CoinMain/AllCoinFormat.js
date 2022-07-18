@@ -13,12 +13,6 @@ const AllCoinFormat = () => {
             .then((res) => { setCoins(res.data); })
             .catch((err) => { console.log(err); });
     }, []);
-    const REFRESHdata = () => {
-        axios
-            .get( "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false" )
-            .then((res) => { setCoins(res.data); })
-            .catch((err) => { console.log(err); });
-    };
     const RETURNprice = () => {
         axios
             .get( "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false" )
@@ -26,7 +20,6 @@ const AllCoinFormat = () => {
             .catch((err) => { console.log(err); });
     };
 
-    // eslint-disable-next-line
     const filteredCoins = coins.filter((coin) => {return coin;});
 
     const HTLprice = () => {
@@ -52,14 +45,14 @@ const AllCoinFormat = () => {
                             <button onClick={HTLprice} className="sortbutton">-- high to low (price $USD) --</button><br/>
                             <button onClick={LTHprice} className="sortbutton">-- low to high (price $USD) --</button><br/>
                             <button onClick={RETURNprice} className="sortbutton">-- return to original --</button><br/>
-                            <button onClick={REFRESHdata} className="sortbutton">-- <span className="refresh"></span>refresh data<span className="refresh"></span> --</button>
+                            <button onClick={RETURNprice} className="sortbutton">-- <span className="refresh"></span>refresh data<span className="refresh"></span> --</button>
                         </pre>
                     </div>
                     <div className="coin-boundbox">
                         {filteredCoins.map((coin) => {
                             return (
                                 <>
-                                <Coin
+                                <Coin 
                                     name={coin.name}
                                     image={coin.image}
                                     symbol={coin.symbol}
