@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import "./components/style/main/main.css";
 import Home from "./components/Home";
-import CoinFormat from "./components/CoinMain/CoinFormat";
+import CoinFormat from "./components/CoinMain/SortedCoinFormat";
 import CoinMainPage from "./components/CoinMain/CoinMainPage";
 import AllCoinFormat from "./components/CoinMain/AllCoinFormat";
 import MeritCircle from "./components/MeritCircle";
