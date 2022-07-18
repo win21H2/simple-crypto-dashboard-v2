@@ -25,10 +25,8 @@ const SolanaBeachWallet = ({ filteredList }) => {
             </thead>
             <tbody>  
               {filteredList.map((sol) => {
-
                 const newnew_balance = sol.new_balance.toLocaleString('en-US', {maximumFractionDigits: 2});
                 const newnew_amount = sol.amount.toLocaleString('en-US', {maximumFractionDigits: 2});
-                
                 return (
                     <tr>
                       <td>

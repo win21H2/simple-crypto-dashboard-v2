@@ -45,7 +45,6 @@ const AllCoinFormat = () => {
                             <button onClick={HTLprice} className="sortbutton">-- high to low (price $USD) --</button><br/>
                             <button onClick={LTHprice} className="sortbutton">-- low to high (price $USD) --</button><br/>
                             <button onClick={RETURNprice} className="sortbutton">-- return to original --</button><br/>
-                            <button onClick={RETURNprice} className="sortbutton">-- <span className="refresh"></span>refresh data<span className="refresh"></span> --</button>
                         </pre>
                     </div>
                     <div className="coin-boundbox">

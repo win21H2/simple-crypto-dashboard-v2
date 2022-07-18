@@ -14,9 +14,12 @@ const SolanaBeachWalletFormat = () => {
             .catch((err) => { console.log(err); });
     }, []);
 
-    const filteredSOL = sol.filter((sol) => {return sol;});
+    const filteredSOL = sol.filter((sol) => {
+        return sol;
+    });
+
     if (filteredSOL.length === 0) {
-        return <h1 className="solanabeach-align solanabeach-notavailable">Loading data.....</h1>;
+        return <h1 className="solanabeach-align solanabeach-notavailable">Loading data, please wait.....</h1>;
     };
 
     return (

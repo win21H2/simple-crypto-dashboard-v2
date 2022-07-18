@@ -7,12 +7,24 @@ import "../style/coin/coin.css";
 const CoinFormat = () => {
     const [coins, setCoins] = useState([]);
 
+
     useEffect(() => {
-        axios
-            .get( "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false" )
-            .then((res) => { setCoins(res.data); })
-            .catch((err) => { console.log(err); });
+        const interval = setInterval(() => {
+            axios
+                .get( "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false" )
+                .then((res) => { setCoins(res.data); })
+                .catch((err) => { console.log(err); });
+            console.log("hello world");
+        }, 1000);
+        // try to make it so that the user can select reload times instead of nuclear
+        // blasting the API w/ requests (e.g. at different times) but we have to make
+        // sure that the page already loads the data the first time that the window
+        // loads and then set the interval time based on what input the user gives.
+
+        return () => clearInterval(interval);
     }, []);
+
+
     const RETURNprice = () => {
         axios
             .get( "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false" )
@@ -51,7 +63,6 @@ const CoinFormat = () => {
                             <button onClick={HTLprice} className="sortbutton">-- high to low (price $USD) --</button><br/>
                             <button onClick={LTHprice} className="sortbutton">-- low to high (price $USD) --</button><br/>
                             <button onClick={RETURNprice} className="sortbutton">-- return to original --</button><br/>
-                            <button onClick={RETURNprice} className="sortbutton">-- <span className="refresh"></span>refresh data<span className="refresh"></span> --</button>
                         </pre>
                     </div>
                     <div className="coin-boundbox">

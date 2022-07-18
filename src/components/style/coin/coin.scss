@@ -1,16 +1,11 @@
 $primary-color: #7c7c7c;
 $secondary-color: #262626;
-$tertiary-color: #313131;
 $crypto-positive-color: #58a257;
 $crypto-negative-color: #d74d3e;
 $border-radius-5px: 5px;
 $size-10px: 10px;
 $align: center;
-$cursor-crosshair: crosshair;
 
-html {cursor: $cursor-crosshair;}
-a {cursor: $cursor-crosshair;}
-.treasury--display {border-radius: $border-radius-5px;}
 .coin img {
     height: calc($size-10px * 5);
     width: calc($size-10px * 5);
@@ -85,18 +80,12 @@ a {cursor: $cursor-crosshair;}
   color: $secondary-color;
   background-color: $primary-color;
   transition: color 0.5s, background-color 0.5s;
-  cursor: $cursor-crosshair;
+  cursor: crosshair;
 }
 .sortbutton:hover {
   color: $primary-color;
   background-color: $secondary-color;
   transition: color 0.5s, background-color 0.5s;
-  .refresh::after {
-    content: " ↻ ";
-    text-emphasis: bold;
-    color: $primary-color;
-    transition: color 0.5s, background-color 0.5s;
-  }
 }
 .homebutton {
   width: 75px;
