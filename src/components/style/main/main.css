@@ -1,10 +1,10 @@
 html {
-  cursor: crosshair;
+  cursor: auto;
   font-family: consolas;
 }
 
 a {
-  cursor: crosshair;
+  cursor: auto;
 }
 
 body {

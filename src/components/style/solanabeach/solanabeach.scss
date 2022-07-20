@@ -4,6 +4,9 @@ $background-table-color: #313131;
 $crypto-negative-color: #d74d3e;
 $cursor-crosshair: crosshair;
 
+h3 {
+    color: $primary-text-color;
+}
 html {cursor: $cursor-crosshair;}
 a {cursor: $cursor-crosshair;}
 .solanabeach {
@@ -32,14 +35,14 @@ a {cursor: $cursor-crosshair;}
     }
 }
 .table {
-    &-title {font-weight: 300; color: #b3b3b3;}
+    &-title {font-weight: 800; color: #dcddde;}
     &-maincolor {
         color: $primary-text-color;
         font-weight: 1000;
     }
 }
 sub {color: $primary-text-color;}
-tr:nth-of-type(even) {background-color: #333333;}
+tr:nth-of-type(2n) {background-color: rgb(44, 44, 44);}
 table {border-spacing: 0;}
 thead {
     border-top-right-radius: 20px;

@@ -1,7 +1,7 @@
 $font-stack: consolas;
 $primary-color: #7c7c7c;
 $secondary-color: #262626;
-$cursor-crosshair: crosshair;
+$cursor-crosshair: auto;
 
 html {cursor: $cursor-crosshair; font-family: $font-stack;}
 a {cursor: $cursor-crosshair;}

@@ -1,3 +1,7 @@
+h3 {
+  color: #ffffff;
+}
+
 html {
   cursor: crosshair;
 }
@@ -35,8 +39,8 @@ a {
 }
 
 .table-title {
-  font-weight: 300;
-  color: #b3b3b3;
+  font-weight: 800;
+  color: #dcddde;
 }
 .table-maincolor {
   color: #ffffff;
@@ -47,8 +51,8 @@ sub {
   color: #ffffff;
 }
 
-tr:nth-of-type(even) {
-  background-color: #333333;
+tr:nth-of-type(2n) {
+  background-color: rgb(44, 44, 44);
 }
 
 table {

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SolanaBeachWallet from "../SolanaBeachMain/SolanaBeachWallet";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import "../style/solanabeach/solanabeach.css";
 
 const SolanaBeachWalletFormat = () => {
@@ -22,17 +21,10 @@ const SolanaBeachWalletFormat = () => {
 
     return (
         <>
-            <nav className="navbar">
-                <Link to="/" className="navbar"><img src="https://www.bancassurances.ch/data/images/accroches/accrocheImmo.png" className="homebutton" alt=""/></Link>
-            </nav>
             <center><br/>
-                <pre className="solanabeach-walletstyle-title">ADDRESS<br/>
-                    <a className="solanabeach-walletstyle" href="https://solanabeach.io/address/CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu/stake-rewards" rel={'noreferrer'} target={'_blank'}>
-                        CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu
-                    </a>
-                </pre><br/>
+            <h1>solana wallet</h1><br/>
             </center>
-            <h3 align="center">STAKE REWARDS</h3>
+            <h3 align="center">Stake Rewards</h3>
             <SolanaBeachWallet filteredList={filteredSOL}/>
         </>
     );
