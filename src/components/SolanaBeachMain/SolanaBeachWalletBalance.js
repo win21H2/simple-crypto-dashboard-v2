@@ -11,7 +11,7 @@ const SolanaBeachWalletBalance = ({ filteredList }) => {
             <thead>
               <tr>
                 <th>
-                  <h4 className="table-title">TOTAL</h4>
+                  <h4 className="table-title">CURRENT BALANCE</h4>
                 </th>
                 <th>
                   <h4 className="table-title">TOTAL EARNED</h4>
@@ -32,13 +32,13 @@ const SolanaBeachWalletBalance = ({ filteredList }) => {
                 const new_balance = sol.total_earned.toLocaleString('en-US', {maximumFractionDigits: 2});
                 return (
                     <tr>
-                      <td>
-                        <p className="table-maincolor"> {new_balance} SOL</p>
-                      </td>
-                      <td>
+                     <td className="table-balanceformat">
                         <p className="table-maincolor"> {new_totalearned} SOL</p>
                       </td>
-                      <td>
+                      <td className="">
+                        <p className="table-maincolor"> {new_balance} SOL</p>
+                      </td>
+                      <td className="">
                         <p className="table-maincolor"> {sol.apr}%</p>
                       </td>
                     </tr>

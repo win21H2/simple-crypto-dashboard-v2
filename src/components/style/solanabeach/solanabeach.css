@@ -8,9 +8,6 @@ h3 {
 .solanabeach-wallet {
   border-radius: 20px;
 }
-.solanabeach-walletstyle-title {
-  font-weight: 1000;
-}
 .solanabeach-notavailable {
   color: #d74d3e;
   font-weight: bold;
@@ -25,13 +22,18 @@ h3 {
   border: 0;
 }
 
+.table-maincolor {
+  color: #ffffff;
+}
 .table-title {
   font-size: 0.8rem;
   color: #ffffff;
 }
-.table-maincolor {
-  color: #ffffff;
-  font-weight: 1000;
+.table-balanceformat {
+  width: 27%;
+}
+.table-stakerewardsformat {
+  width: 25%;
 }
 
 tr:nth-of-type(2n) {

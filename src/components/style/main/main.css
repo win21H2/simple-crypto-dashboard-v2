@@ -1,15 +1,5 @@
-html {
-  cursor: auto;
-  font-family: consolas;
-}
-
 a {
   cursor: auto;
-}
-
-body {
-  background-color: #262626;
-  font-family: consolas;
 }
 
 .navbar {
@@ -22,6 +12,16 @@ body {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+html {
+  cursor: auto;
+  font-family: consolas;
+}
+
+body {
+  background-color: #262626;
+  font-family: consolas;
 }
 
 h1, h4, p {

@@ -36,16 +36,16 @@ const SolanaBeachWallet = ({ filteredList }) => {
                 const newnew_amount = sol.amount.toLocaleString('en-US', {maximumFractionDigits: 2});
                 return (
                     <tr>
-                      <td>
+                      <td className="table-stakerewardsformat">
                         <p className="table-maincolor"> {sol.epoch}</p>
                       </td>
-                      <td>
+                      <td className="table-stakerewardsformat">
                         <p className="table-maincolor"> {newnew_amount} SOL</p>
                       </td>
-                      <td>
+                      <td className="table-stakerewardsformat">
                         <p className="table-maincolor"> {newnew_balance} SOL</p>
                       </td>
-                      <td>
+                      <td className="table-stakerewardsformat">
                         <p className="table-maincolor"> {sol.apr}%</p>
                       </td>
                     </tr>
