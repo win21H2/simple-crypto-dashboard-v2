@@ -8,6 +8,9 @@ h3 {
 .solanabeach-wallet {
   border-radius: 20px;
 }
+.solanabeach-walletstyle {
+  color: #69f5e1;
+}
 .solanabeach-notavailable {
   color: #d74d3e;
   font-weight: bold;
@@ -16,6 +19,10 @@ h3 {
   text-align: center;
   background-color: #313131;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 15px 30px 0px;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .solanabeach-card td {
   padding: 10px;
@@ -25,15 +32,15 @@ h3 {
 .table-maincolor {
   color: #ffffff;
 }
-.table-title {
-  font-size: 0.8rem;
-  color: #ffffff;
-}
 .table-balanceformat {
   width: 27%;
 }
 .table-stakerewardsformat {
   width: 25%;
+}
+.table-title {
+  font-size: 0.8rem;
+  color: #ffffff;
 }
 
 tr:nth-of-type(2n) {

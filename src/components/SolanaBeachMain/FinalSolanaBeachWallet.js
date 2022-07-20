@@ -5,6 +5,8 @@ const FinalSolanaBeachWallet = () => {
     return (
         <>
             <SolanaBeachWalletFormatBalance/>
+            <br/>
+            <br/>
             <SolanaBeachWalletFormatStakeRewards/>
         </>
     )

@@ -1,20 +1,26 @@
 $primary-text-color: #ffffff;
 $even-table-background: #333333;
 $background-table-color: #313131;
-$crypto-negative-color: #d74d3e;
+$loading-color: #d74d3e;
+$cyan-color: #69f5e1;
 
 h3 {color: $primary-text-color;}
 .solanabeach {
     &-card {width: 100%;}
     &-wallet {border-radius: 20px;}
+    &-walletstyle {color: $cyan-color;}
     &-notavailable {
-        color: $crypto-negative-color;
+        color: $loading-color;
         font-weight: bold;
     }
     &-wallet {
         text-align: center;
         background-color: $background-table-color;
         box-shadow: rgb(0 0 0 / 20%) 0px 15px 30px 0px;
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     &-card td {
         padding: 10px;
@@ -23,15 +29,11 @@ h3 {color: $primary-text-color;}
 }
 .table {
     &-maincolor {color: $primary-text-color;}
+    &-balanceformat {width: 27%;}
+    &-stakerewardsformat {width: 25%;}
     &-title {
         font-size: 0.8rem;
         color: $primary-text-color;
-    }
-    &-balanceformat {
-        width: 27%;
-    }
-    &-stakerewardsformat {
-        width: 25%;
     }
 }
 tr:nth-of-type(2n) {background-color: rgb(44, 44, 44);}
