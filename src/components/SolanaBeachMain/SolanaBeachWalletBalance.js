@@ -1,7 +1,16 @@
-import React from "react";
 import "../style/solanabeach/solanabeach.css";
+import React, { useState, useEffect } from "react";
 
 const SolanaBeachWalletBalance = ({ filteredList }) => {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
+      }, []);
+
     return (
       <>
         <div className="solanabeach-align">
@@ -26,27 +35,35 @@ const SolanaBeachWalletBalance = ({ filteredList }) => {
                 <tr style={{ display: "none" }}>
                   <td colSpan={3}>&nbsp;</td>
                 </tr>
-                {filteredList.map((sol) => {
-                  const new_totalearned = sol.balance.toLocaleString("en-US", {
-                    maximumFractionDigits: 2,
-                  });
-                  const new_balance = sol.total_earned.toLocaleString("en-US", {
-                    maximumFractionDigits: 2,
-                  });
-                  return (
-                    <tr>
-                      <td className="table-balanceformat">
-                        <p className="table-maincolor">{new_totalearned} SOL</p>
-                      </td>
-                      <td className="table-balanceformat">
-                        <p className="table-maincolor"> {new_balance} SOL</p>
-                      </td>
-                      <td className="table-balanceformat">
-                        <p className="table-maincolor"> {sol.apr}%</p>
-                      </td>
-                    </tr>
-                  );
-                })}
+                {loading ? (
+                <div className="loader-container">
+                    <div className="spinner"></div>
+                </div>
+                ) : (
+                    <>
+                    {filteredList.map((sol) => {
+                    const new_totalearned = sol.balance.toLocaleString("en-US", {
+                        maximumFractionDigits: 2,
+                    });
+                    const new_balance = sol.total_earned.toLocaleString("en-US", {
+                        maximumFractionDigits: 2,
+                    });
+                    return (
+                        <tr>
+                            <td className="table-balanceformat">
+                                <p className="table-maincolor">{new_totalearned} SOL</p>
+                            </td>
+                            <td className="table-balanceformat">
+                                <p className="table-maincolor"> {new_balance} SOL</p>
+                            </td>
+                            <td className="table-balanceformat">
+                                <p className="table-maincolor"> {sol.apr}%</p>
+                            </td>
+                        </tr>
+                    );
+                    })}
+                    </>
+                )}
               </tbody>
               <tfoot>
                 <tr>
