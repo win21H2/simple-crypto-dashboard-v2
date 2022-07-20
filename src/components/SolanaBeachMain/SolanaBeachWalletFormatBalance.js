@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import SolanaBeachWallet from "../SolanaBeachMain/SolanaBeachWallet";
+import SolanaBeachWalletBalance from "./SolanaBeachWalletBalance";
 import axios from "axios";
 import "../style/solanabeach/solanabeach.css";
 
-const SolanaBeachWalletFormat = () => {
+const SolanaBeachWalletFormatBalance = () => {
     const [sol, setSol] = useState([]);
 
     useEffect(() => {
@@ -14,17 +14,18 @@ const SolanaBeachWalletFormat = () => {
     }, []);
 
     const filteredSOL = sol.filter((sol) => {return sol;});
+    const filteredList = filteredSOL.length > 5 ? filteredSOL.slice(filteredSOL.length - 5) : filteredSOL;
 
-    if (filteredSOL.length === 0) {
+    if (filteredList.length === 0) {
         return <h1 className="solanabeach-align solanabeach-notavailable">Loading data, please wait.....</h1>;
     };
 
     return (
         <>
             <h1>solana wallet</h1><br/>
-            <SolanaBeachWallet filteredList={filteredSOL}/>
+            <SolanaBeachWalletBalance filteredList={filteredList}/>
         </>
-    );
-  };
-  
-  export default SolanaBeachWalletFormat;
+    ) 
+}
+
+export default SolanaBeachWalletFormatBalance;

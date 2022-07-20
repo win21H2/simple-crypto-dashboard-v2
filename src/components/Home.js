@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import "../components/style/main/main.css";
 import CoinMainPageNav from "./navigation/CoinMainPageNav";
 import MeritCircleNav from "./navigation/MeritCircleNav";
-import SolanaBeachWalletFormat from "./SolanaBeachMain/SolanaBeachWalletFormat";
+import FinalSolanaBeachWallet from "./SolanaBeachMain/FinalSolanaBeachWallet";
 
 function Home () {
 
     return (
         <>
-            <SolanaBeachWalletFormat/>
+            <FinalSolanaBeachWallet/>
             <nav className="navbar">
                 <Link to="/components/CoinMain/CoinMainPage"><CoinMainPageNav/></Link>
                 <Link to="/MeritCircle"><MeritCircleNav/></Link>
