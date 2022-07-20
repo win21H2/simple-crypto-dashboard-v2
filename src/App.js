@@ -12,12 +12,12 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="components/CoinMain/CoinFormat" element={<CoinFormat />} />
-        <Route path="components/CoinMain/AllCoinFormat" element={<AllCoinFormat />} />
-        <Route path="components/CoinMain/CoinMainPage" element={<CoinMainPage />} />
-        <Route path="components/MeritCircle" element={<MeritCircle />} />
-        <Route path="components/SolanaBeachMain/SolanaBeachWalletFormat" element={<SolanaBeachWalletFormat />} />
+        <Route path="/" element={<Home/>}/>
+        <Route path="components/CoinMain/CoinFormat" element={<CoinFormat/>}/>
+        <Route path="components/CoinMain/AllCoinFormat" element={<AllCoinFormat/>}/>
+        <Route path="components/CoinMain/CoinMainPage" element={<CoinMainPage/>}/>
+        <Route path="components/MeritCircle" element={<MeritCircle/>}/>
+        <Route path="components/SolanaBeachMain/SolanaBeachWalletFormat" element={<SolanaBeachWalletFormat/>}/>
       </Routes>
       <ScrollButton/>
     </>
