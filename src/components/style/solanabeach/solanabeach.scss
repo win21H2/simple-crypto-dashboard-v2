@@ -2,29 +2,19 @@ $primary-text-color: #ffffff;
 $even-table-background: #333333;
 $background-table-color: #313131;
 $crypto-negative-color: #d74d3e;
-$cursor-crosshair: auto;
 
 h3 {color: $primary-text-color;}
-html {cursor: $cursor-crosshair;}
-a {cursor: $cursor-crosshair;}
 .solanabeach {
     &-card {width: 100%;}
     &-wallet {border-radius: 20px;}
-    &-walletstyle {
-        color: #63e0ce;
-        font-weight: 1000;
-        text-decoration: none;
-    }
-    &-walletstyle-title {
-        font-weight: 1000;
-    }
+    &-walletstyle-title {font-weight: 1000;}
     &-notavailable {
         color: $crypto-negative-color;
         font-weight: bold;
     }
     &-wallet {
         text-align: center;
-        background-color: #313131;
+        background-color: $background-table-color;
         box-shadow: rgb(0 0 0 / 20%) 0px 15px 30px 0px;
     }
     &-card td {
@@ -35,14 +25,13 @@ a {cursor: $cursor-crosshair;}
 .table {
     &-title {
         font-size: 0.8rem;
-        color: #dcddde;
+        color: $primary-text-color;
     }
     &-maincolor {
         color: $primary-text-color;
         font-weight: 1000;
     }
 }
-sub {color: $primary-text-color;}
 tr:nth-of-type(2n) {background-color: rgb(44, 44, 44);}
 table {border-spacing: 0;}
 thead {
@@ -52,17 +41,4 @@ thead {
 tfoot {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-}
-.homebutton {
-    width: 75px;
-    border-radius: 10px;
-    box-shadow: rgb(0 0 0 / 25%) 0px 15px 30px 0px;
-    transition-duration: 0.5s;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 10px;
-}
-.homebutton:hover {
-    transition-duration: 0.5s;
-    box-shadow: rgb(0 0 0 / 100%) 0px 15px 30px 0px;
 }

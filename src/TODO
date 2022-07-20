@@ -2,7 +2,6 @@ WORK ON LATER
 - add section with Balance, Total Earned, Apr % (see screenshot) that looks just like Stake Rewards Section (put it on top of Stake Rewards) // WORK ON LATER [WAIT FOR API]
 - body css - font-family: Futura; // WORK ON LATER [WAIT FOR API]
 - inside 'Balance' section add another row Address and put the address in there instead (remove the Address CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu section from the page) // WORK ON LATER [WAIT FOR API]
-- make a seperate file for the solana balance
 
 DONE
 - make the routes go from 'components/MeritCircle' to just 'meritcircle' or 'mc' (no "/components/") // DONE
@@ -16,3 +15,4 @@ DONE
 - STAKE REWARDS -> Stake Rewards and color: white; // DONE 
 - .title-text font size 0.8rem // DONE
 - Limit the number of epochs to 5 and then have a button which "shows" the rest of the epochs // DONE
+- make a seperate file for the solana balance // DONE
