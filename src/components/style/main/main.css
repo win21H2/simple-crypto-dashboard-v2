@@ -1,5 +1,6 @@
 html {
   cursor: crosshair;
+  font-family: consolas;
 }
 
 a {
@@ -8,6 +9,7 @@ a {
 
 body {
   background-color: #262626;
+  font-family: consolas;
 }
 
 .navbar {

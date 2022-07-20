@@ -1,0 +1,15 @@
+PRODUCTION POLISH - TODO 
+
+- .title-text font size 0.8rem // WORK ON LATER
+- body css - font-family: Futura; cursor: default; // WORK ON LATER
+- STAKE REWARDS -> Stake Rewards and color: white;
+- for .table-maincolor change <pre> to <p> and put SOL inside the <p> e.g. <p>339,845.63 SOL</p>
+- same as above for APR %
+- tr:nth-of-type(2n) {
+    background-color: rgb(44, 44, 44);
+}
+- for now make the Solana wallet page the home page 
+- make the routes go from 'components/MeritCircle' to just 'meritcircle' or 'mc' (no "/components/")
+- add section with Balance, Total Earned, Apr % (see screenshot) that looks just like Stake Rewards Section (put it on top of Stake Rewards)
+- inside 'Balance' section add another row Address and put the address in there instead (remove the Address CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu section from the page)
+- hide link to home page on Solana (for now - for build 1.0.0 let's just have the Solana wallet)

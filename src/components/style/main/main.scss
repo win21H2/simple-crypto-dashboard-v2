@@ -3,9 +3,9 @@ $primary-color: #7c7c7c;
 $secondary-color: #262626;
 $cursor-crosshair: crosshair;
 
-html {cursor: $cursor-crosshair;}
+html {cursor: $cursor-crosshair; font-family: $font-stack;}
 a {cursor: $cursor-crosshair;}
-body {background-color: $secondary-color;}
+body {background-color: $secondary-color; font-family: $font-stack;}
 .navbar {text-align: center;}
 .centered {text-align: center;}
 ::-webkit-scrollbar {display: none;}
