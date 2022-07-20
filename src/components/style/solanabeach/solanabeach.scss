@@ -2,11 +2,9 @@ $primary-text-color: #ffffff;
 $even-table-background: #333333;
 $background-table-color: #313131;
 $crypto-negative-color: #d74d3e;
-$cursor-crosshair: crosshair;
+$cursor-crosshair: auto;
 
-h3 {
-    color: $primary-text-color;
-}
+h3 {color: $primary-text-color;}
 html {cursor: $cursor-crosshair;}
 a {cursor: $cursor-crosshair;}
 .solanabeach {
@@ -35,7 +33,10 @@ a {cursor: $cursor-crosshair;}
     }
 }
 .table {
-    &-title {font-weight: 800; color: #dcddde;}
+    &-title {
+        font-size: 0.8rem;
+        color: #dcddde;
+    }
     &-maincolor {
         color: $primary-text-color;
         font-weight: 1000;

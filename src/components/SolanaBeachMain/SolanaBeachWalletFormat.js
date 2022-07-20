@@ -21,10 +21,7 @@ const SolanaBeachWalletFormat = () => {
 
     return (
         <>
-            <center><br/>
             <h1>solana wallet</h1><br/>
-            </center>
-            <h3 align="center">Stake Rewards</h3>
             <SolanaBeachWallet filteredList={filteredSOL}/>
         </>
     );

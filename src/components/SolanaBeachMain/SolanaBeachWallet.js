@@ -5,6 +5,48 @@ const SolanaBeachWallet = ({ filteredList }) => {
   return (
     <>
       <div className="solanabeach-align">
+      <h3 align="center">Balance</h3>
+        <div className="solanabeach-wallet">
+        <table className="solanabeach-card" >
+            <thead>
+              <tr>
+                <th>
+                  <h4 className="table-title">Balance</h4>
+                </th>
+              </tr>
+            </thead>
+            <tbody> 
+              <tr style={{display: "none"}}>
+                <td colSpan={3}>
+                  &nbsp;
+                </td>
+                </tr>
+              {filteredList.map((sol) => {
+                return (
+                    <tr>
+                      <td>
+                        <p className="table-maincolor">Total</p>
+                      </td>
+                      <td>
+                        <p className="table-maincolor">Total Earned</p>
+                      </td>
+                      <td>
+                        <p className="table-maincolor">Annualized</p>
+                      </td>
+                    </tr>
+                  );
+                })}
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colSpan={3}>
+                  &nbsp;
+                </td>
+                </tr>
+            </tfoot>    
+          </table>
+        </div>
+          <h3 align="center">Stake Rewards</h3>
         <div className="solanabeach-wallet">
           <table className="solanabeach-card" >
             <thead>

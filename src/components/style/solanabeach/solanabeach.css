@@ -3,11 +3,11 @@ h3 {
 }
 
 html {
-  cursor: crosshair;
+  cursor: auto;
 }
 
 a {
-  cursor: crosshair;
+  cursor: auto;
 }
 
 .solanabeach-card {
@@ -39,7 +39,7 @@ a {
 }
 
 .table-title {
-  font-weight: 800;
+  font-size: 0.8rem;
   color: #dcddde;
 }
 .table-maincolor {
