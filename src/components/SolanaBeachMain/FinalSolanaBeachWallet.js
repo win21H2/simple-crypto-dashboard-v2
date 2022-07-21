@@ -1,13 +1,13 @@
-import SolanaBeachWalletFormatBalance from "./SolanaBeachWalletFormatBalance";
-import SolanaBeachWalletFormatStakeRewards from "./SolanaBeachWalletFormatStakeRewards";
+import SolanaBeachWalletBalance from "./SolanaBeachWalletBalance";
+import SolanaBeachWalletStakeRewards from "./SolanaBeachWalletStakeRewards";
 
 const FinalSolanaBeachWallet = () => {
     return (
         <>
-            <SolanaBeachWalletFormatBalance/>
+            <SolanaBeachWalletBalance/>
             <br/>
             <br/>
-            <SolanaBeachWalletFormatStakeRewards/>
+            <SolanaBeachWalletStakeRewards/>
         </>
     )
 }

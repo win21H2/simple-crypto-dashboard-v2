@@ -1,15 +1,28 @@
 import "../style/solanabeach/solanabeach.css";
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const SolanaBeachWalletBalance = ({ filteredList }) => {
+const SolanaBeachWalletBalance = () => {
+  const [sol, setSol] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         setLoading(true);
-        setTimeout(() => {
-          setLoading(false);
-        }, 2000);
+        axios
+          .get("https://cosimo-api.herokuapp.com/api/v1/satoshi_sol_balance?limit=1&filter_by=address&filter_by_value=CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu&api_key=aSmBpNbftAU0RZAkzXthU5lCIJHHNqGd")
+          .then((res) => {
+            setSol(res.data);
+            setLoading(false);
+          })
+          .catch((err) => { console.log(err); });
       }, []);
+
+    const filteredSOL = sol.filter((sol) => {return sol;});
+    const filteredList = filteredSOL.length > 5 ? filteredSOL.slice(filteredSOL.length - 5) : filteredSOL;
+
+    if (filteredList.length === 0) {
+        return <h1 className="solanabeach-align solanabeach-notavailable">Loading data, please wait.....</h1>;
+    };
 
     return (
       <>
