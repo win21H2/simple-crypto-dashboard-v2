@@ -20,10 +20,6 @@ const SolanaBeachWallet = () => {
     const filteredSOL = sol.filter((sol) => {return sol;});
     const filteredList = filteredSOL.length > 5 ? filteredSOL.slice(filteredSOL.length - 5) : filteredSOL;
 
-    if (filteredList.length === 0) {
-      return <h1 className="solanabeach-align solanabeach-notavailable">Loading data, please wait.....</h1>;
-    };
-
   return (
     <>
       <div className="solanabeach-align">
@@ -33,16 +29,16 @@ const SolanaBeachWallet = () => {
             <thead>
               <tr>
                 <th>
-                  <h4 className="table-title">EPOCH</h4>
+                  <h1 className="table-title">EPOCH</h1>
                 </th>
                 <th>
-                  <h4 className="table-title">AMOUNT</h4>
+                  <h1 className="table-title">AMOUNT</h1>
                 </th>
                 <th>
-                  <h4 className="table-title">NEW BALANCE</h4>
+                  <h1 className="table-title">NEW BALANCE</h1>
                 </th>
                 <th>
-                  <h4 className="table-title">APR</h4>
+                  <h1 className="table-title">APR</h1>
                 </th>
               </tr>
             </thead>
@@ -64,16 +60,16 @@ const SolanaBeachWallet = () => {
                     return (
                         <tr>
                           <td className="table-stakerewardsformat">
-                            <p className="table-maincolor"> {sol.epoch}</p>
+                            <p className="table-maincolor">{sol.epoch}</p>
                           </td>
                           <td className="table-stakerewardsformat">
-                            <p className="table-maincolor"> {newnew_amount} SOL</p>
+                            <p className="table-maincolor">{newnew_amount} SOL</p>
                           </td>
                           <td className="table-stakerewardsformat">
-                            <p className="table-maincolor"> {newnew_balance} SOL</p>
+                            <p className="table-maincolor">{newnew_balance} SOL</p>
                           </td>
                           <td className="table-stakerewardsformat">
-                            <p className="table-maincolor"> {sol.apr}%</p>
+                            <p className="table-maincolor">{sol.apr}%</p>
                           </td>
                         </tr>
                       );

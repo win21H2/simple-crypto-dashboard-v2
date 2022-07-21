@@ -1,28 +1,24 @@
-import "../style/solanabeach/solanabeach.css";
 import React, { useState, useEffect } from "react";
+import "../style/solanabeach/solanabeach.css";
 import axios from "axios";
 
 const SolanaBeachWalletBalance = () => {
   const [sol, setSol] = useState([]);
-    const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        setLoading(true);
-        axios
-          .get("https://cosimo-api.herokuapp.com/api/v1/satoshi_sol_balance?limit=1&filter_by=address&filter_by_value=CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu&api_key=aSmBpNbftAU0RZAkzXthU5lCIJHHNqGd")
-          .then((res) => {
-            setSol(res.data);
-            setLoading(false);
-          })
-          .catch((err) => { console.log(err); });
-      }, []);
+  useEffect(() => {
+      setLoading(true);
+      axios
+        .get("https://cosimo-api.herokuapp.com/api/v1/satoshi_sol_balance?limit=1&filter_by=address&filter_by_value=CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu&api_key=aSmBpNbftAU0RZAkzXthU5lCIJHHNqGd")
+        .then((res) => {
+          setSol(res.data);
+          setLoading(false);
+        })
+        .catch((err) => { console.log(err); });
+    }, []);
 
-    const filteredSOL = sol.filter((sol) => {return sol;});
-    const filteredList = filteredSOL.length > 5 ? filteredSOL.slice(filteredSOL.length - 5) : filteredSOL;
-
-    if (filteredList.length === 0) {
-        return <h1 className="solanabeach-align solanabeach-notavailable">Loading data, please wait.....</h1>;
-    };
+  const filteredSOL = sol.filter((sol) => {return sol;});
+  const filteredList = filteredSOL.length > 5 ? filteredSOL.slice(filteredSOL.length - 5) : filteredSOL;
 
     return (
       <>
@@ -55,22 +51,18 @@ const SolanaBeachWalletBalance = () => {
                 ) : (
                     <>
                     {filteredList.map((sol) => {
-                    const new_totalearned = sol.balance.toLocaleString("en-US", {
-                        maximumFractionDigits: 2,
-                    });
-                    const new_balance = sol.total_earned.toLocaleString("en-US", {
-                        maximumFractionDigits: 2,
-                    });
+                    const new_totalearned = sol.balance.toLocaleString("en-US", {maximumFractionDigits: 2,});
+                    const new_balance = sol.total_earned.toLocaleString("en-US", {maximumFractionDigits: 2,});
                     return (
                         <tr>
                             <td className="table-balanceformat">
                                 <p className="table-maincolor">{new_totalearned} SOL</p>
                             </td>
                             <td className="table-balanceformat">
-                                <p className="table-maincolor"> {new_balance} SOL</p>
+                                <p className="table-maincolor">{new_balance} SOL</p>
                             </td>
                             <td className="table-balanceformat">
-                                <p className="table-maincolor"> {sol.apr}%</p>
+                                <p className="table-maincolor">{sol.apr}%</p>
                             </td>
                         </tr>
                     );
