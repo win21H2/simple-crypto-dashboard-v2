@@ -18,9 +18,6 @@ const SolanaBeachWalletBalance = () => {
         .catch((err) => { console.log(err); });
     }, []);
 
-  const filteredSOL = sol.filter((sol) => {return sol;});
-  const filteredList = filteredSOL.length > 5 ? filteredSOL.slice(filteredSOL.length - 5) : filteredSOL;
-
     return (
       <>
         <div className="solanabeach-align">
@@ -43,7 +40,7 @@ const SolanaBeachWalletBalance = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr style={{ display: "none" }}>
+                  <tr style={{display: "none"}}>
                     <td colSpan={3}>&nbsp;</td>
                   </tr>
                   {loading ? (
@@ -52,23 +49,23 @@ const SolanaBeachWalletBalance = () => {
                   </div>
                   ) : (
                       <>
-                      {filteredList.map((sol) => {
-                      const new_totalearned = sol.balance.toLocaleString("en-US", {maximumFractionDigits: 2,});
-                      const new_balance = sol.total_earned.toLocaleString("en-US", {maximumFractionDigits: 2,});
-                      return (
-                          <tr>
-                              <td className="table-balanceformat">
-                                  <p className="table-maincolor">{new_totalearned} SOL</p>
-                              </td>
-                              <td className="table-balanceformat">
-                                  <p className="table-maincolor">{new_balance} SOL</p>
-                              </td>
-                              <td className="table-balanceformat">
-                                  <p className="table-maincolor">{sol.apr}%</p>
-                              </td>
-                          </tr>
-                      );
-                      })}
+                        {sol.map((sol) => {
+                        const new_totalearned = sol.balance.toLocaleString("en-US", {maximumFractionDigits: 2,});
+                        const new_balance = sol.total_earned.toLocaleString("en-US", {maximumFractionDigits: 2,});
+                          return (
+                              <tr>
+                                  <td className="table-balanceformat">
+                                      <p className="table-maincolor">{new_totalearned} SOL</p>
+                                  </td>
+                                  <td className="table-balanceformat">
+                                      <p className="table-maincolor">{new_balance} SOL</p>
+                                  </td>
+                                  <td className="table-balanceformat">
+                                      <p className="table-maincolor">{sol.apr}%</p>
+                                  </td>
+                              </tr>
+                          );
+                        })}
                       </>
                   )}
                 </tbody>
