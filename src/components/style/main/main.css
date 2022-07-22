@@ -14,6 +14,10 @@ a {
   display: none;
 }
 
+.home-logo {
+  width: 100px;
+}
+
 html {
   cursor: auto;
   font-family: consolas, monaco, monospace;
