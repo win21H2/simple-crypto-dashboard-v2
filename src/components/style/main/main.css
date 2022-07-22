@@ -16,22 +16,22 @@ a {
 
 html {
   cursor: auto;
-  font-family: consolas;
+  font-family: consolas, monaco, monospace;
 }
 
 body {
   background-color: #262626;
-  font-family: consolas;
+  font-family: consolas, monaco, monospace;
 }
 
 h1, h4, p {
-  font-family: consolas;
+  font-family: consolas, monaco, monospace;
   color: #7c7c7c;
   text-align: center;
 }
 
 * {
-  font-family: consolas;
+  font-family: consolas, monaco, monospace;
   color: #7c7c7c;
 }
 

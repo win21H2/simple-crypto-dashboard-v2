@@ -1,8 +1,9 @@
+import { Offline, Online } from "react-detect-offline";
 import React, { useState, useEffect } from "react";
 import "../style/solanabeach/solanabeach.css";
 import axios from "axios";
 
-const SolanaBeachWallet = () => {
+const SolanaBeachWalletStakeRewards = () => {
   const [sol, setSol] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -23,72 +24,75 @@ const SolanaBeachWallet = () => {
   return (
     <>
       <div className="solanabeach-align">
-        <h3 align="center">Stake Rewards</h3>
-        <div className="solanabeach-wallet">
-          <table className="solanabeach-card" >
-            <thead>
-              <tr>
-                <th>
-                  <h1 className="table-title">EPOCH</h1>
-                </th>
-                <th>
-                  <h1 className="table-title">AMOUNT</h1>
-                </th>
-                <th>
-                  <h1 className="table-title">NEW BALANCE</h1>
-                </th>
-                <th>
-                  <h1 className="table-title">APR</h1>
-                </th>
-              </tr>
-            </thead>
-            <tbody> 
-              <tr style={{display: "none"}}>
-                <td colSpan={4}>
-                  &nbsp;
-                </td>
-              </tr>
-              {loading ? (
-                <div className="loader-container">
-                    <div className="spinner"></div>
-                </div>
-                ) : (
-                  <>
-                    {filteredList.map((sol) => {
-                    const newnew_balance = sol.new_balance.toLocaleString('en-US', {maximumFractionDigits: 2});
-                    const newnew_amount = sol.amount.toLocaleString('en-US', {maximumFractionDigits: 2});
-                    return (
-                        <tr>
-                          <td className="table-stakerewardsformat">
-                            <p className="table-maincolor">{sol.epoch}</p>
-                          </td>
-                          <td className="table-stakerewardsformat">
-                            <p className="table-maincolor">{newnew_amount} SOL</p>
-                          </td>
-                          <td className="table-stakerewardsformat">
-                            <p className="table-maincolor">{newnew_balance} SOL</p>
-                          </td>
-                          <td className="table-stakerewardsformat">
-                            <p className="table-maincolor">{sol.apr}%</p>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </>
-                )}
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colSpan={4}>
-                  &nbsp;
-                </td>
+        <Online>
+          <h3 align="center">Stake Rewards</h3>
+          <div className="solanabeach-wallet">
+            <table className="solanabeach-card" >
+              <thead>
+                <tr>
+                  <th>
+                    <h1 className="table-title">EPOCH</h1>
+                  </th>
+                  <th>
+                    <h1 className="table-title">AMOUNT</h1>
+                  </th>
+                  <th>
+                    <h1 className="table-title">NEW BALANCE</h1>
+                  </th>
+                  <th>
+                    <h1 className="table-title">APR</h1>
+                  </th>
                 </tr>
-            </tfoot>    
-          </table>
-        </div>
+              </thead>
+              <tbody> 
+                <tr style={{display: "none"}}>
+                  <td colSpan={4}>
+                    &nbsp;
+                  </td>
+                </tr>
+                {loading ? (
+                  <div className="loader-container">
+                      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                  </div>
+                  ) : (
+                    <>
+                      {filteredList.map((sol) => {
+                      const newnew_balance = sol.new_balance.toLocaleString('en-US', {maximumFractionDigits: 2});
+                      const newnew_amount = sol.amount.toLocaleString('en-US', {maximumFractionDigits: 2});
+                      return (
+                          <tr>
+                            <td className="table-stakerewardsformat">
+                              <p className="table-maincolor">{sol.epoch}</p>
+                            </td>
+                            <td className="table-stakerewardsformat">
+                              <p className="table-maincolor">{newnew_amount} SOL</p>
+                            </td>
+                            <td className="table-stakerewardsformat">
+                              <p className="table-maincolor">{newnew_balance} SOL</p>
+                            </td>
+                            <td className="table-stakerewardsformat">
+                              <p className="table-maincolor">{sol.apr}%</p>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </>
+                  )}
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colSpan={4}>
+                    &nbsp;
+                  </td>
+                  </tr>
+              </tfoot>    
+            </table>
+          </div>
+        </Online>
+        <Offline><h1>Oh no! looks like you are offline!</h1></Offline>
       </div>
     </>
   );
 };
 
-export default SolanaBeachWallet;
+export default SolanaBeachWalletStakeRewards;
