@@ -23,7 +23,7 @@ const SolanaBeachWalletBalance = () => {
         <div className="solanabeach-align">
           <Online>
             <h5 className="solanabeach-walletstyle centered">CvCLZD6TVrVGWhwrPq8WJcfHHtziWCdmdcvMvvLLTLRu</h5>
-            <h3 className="centered">Balance</h3>
+            <h3 className="centered">Solana Balance</h3>
             <div className="solanabeach-wallet">
               <table className="solanabeach-card">
                 <thead>
@@ -55,10 +55,10 @@ const SolanaBeachWalletBalance = () => {
                           return (
                               <tr>
                                   <td className="table-balanceformat">
-                                      <p className="table-maincolor">{new_totalearned} SOL</p>
+                                      <p className="table-maincolor">{new_totalearned}</p>
                                   </td>
                                   <td className="table-balanceformat">
-                                      <p className="table-maincolor">{new_balance} SOL</p>
+                                      <p className="table-maincolor">{new_balance}</p>
                                   </td>
                                   <td className="table-balanceformat">
                                       <p className="table-maincolor">{sol.apr}%</p>

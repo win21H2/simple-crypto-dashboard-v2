@@ -64,10 +64,10 @@ const SolanaBeachWalletStakeRewards = () => {
                                 <p className="table-maincolor">{sol.epoch}</p>
                               </td>
                               <td className="table-stakerewardsformat">
-                                <p className="table-maincolor">{newnew_amount} SOL</p>
+                                <p className="table-maincolor">{newnew_amount}</p>
                               </td>
                               <td className="table-stakerewardsformat">
-                                <p className="table-maincolor">{newnew_balance} SOL</p>
+                                <p className="table-maincolor">{newnew_balance}</p>
                               </td>
                               <td className="table-stakerewardsformat">
                                 <p className="table-maincolor">{sol.apr}%</p>
