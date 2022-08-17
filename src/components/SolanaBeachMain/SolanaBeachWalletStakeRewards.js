@@ -29,62 +29,34 @@ const SolanaBeachWalletStakeRewards = () => {
             <table className="solanabeach-card" >
               <thead>
                 <tr>
-                  <th>
-                    <h1 className="table-title">EPOCH</h1>
-                  </th>
-                  <th>
-                    <h1 className="table-title">AMOUNT</h1>
-                  </th>
-                  <th>
-                    <h1 className="table-title">NEW BALANCE</h1>
-                  </th>
-                  <th>
-                    <h1 className="table-title">APR</h1>
-                  </th>
+                  <th><h1 className="table-title">EPOCH</h1></th>
+                  <th><h1 className="table-title">AMOUNT</h1></th>
+                  <th><h1 className="table-title">NEW BALANCE</h1></th>
+                  <th><h1 className="table-title">APR</h1></th>
                 </tr>
               </thead>
               <tbody> 
-                <tr style={{display: "none"}}>
-                  <td colSpan={4}>
-                    &nbsp;
-                  </td>
-                </tr>
+                <tr style={{display: "none"}}><td colSpan={4}>&nbsp;</td></tr>
                 {loading ? (
-                  <div className="loader-container">
-                      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-                  </div>
-                  ) : (
-                    <>
-                      {filteredList.map((sol) => {
+                  <div className="loader-container"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
+                ) : (
+                  <>
+                    {filteredList.map((sol) => {
                       const newnew_balance = sol.new_balance.toLocaleString('en-US', {maximumFractionDigits: 2});
                       const newnew_amount = sol.amount.toLocaleString('en-US', {maximumFractionDigits: 2});
-                        return (
-                            <tr>
-                              <td className="table-stakerewardsformat">
-                                <p className="table-maincolor">{sol.epoch}</p>
-                              </td>
-                              <td className="table-stakerewardsformat">
-                                <p className="table-maincolor">{newnew_amount}</p>
-                              </td>
-                              <td className="table-stakerewardsformat">
-                                <p className="table-maincolor">{newnew_balance}</p>
-                              </td>
-                              <td className="table-stakerewardsformat">
-                                <p className="table-maincolor">{sol.apr}%</p>
-                              </td>
-                            </tr>
-                        );
-                      })}
-                    </>
-                  )}
+                      return (
+                        <tr>
+                          <td className="table-stakerewardsformat"><p className="table-maincolor">{sol.epoch}</p></td>
+                          <td className="table-stakerewardsformat"><p className="table-maincolor">{newnew_amount}</p></td>
+                          <td className="table-stakerewardsformat"><p className="table-maincolor">{newnew_balance}</p></td>
+                          <td className="table-stakerewardsformat"><p className="table-maincolor">{sol.apr}%</p></td>
+                        </tr>
+                      );
+                    })}
+                  </>
+                )}
               </tbody>
-              <tfoot>
-                <tr>
-                  <td colSpan={4}>
-                    &nbsp;
-                  </td>
-                  </tr>
-              </tfoot>    
+              <tfoot><tr><td colSpan={4}>&nbsp;</td></tr></tfoot>    
             </table>
           </div>
         </Online>

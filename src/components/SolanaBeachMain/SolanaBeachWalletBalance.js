@@ -28,52 +28,32 @@ const SolanaBeachWalletBalance = () => {
               <table className="solanabeach-card">
                 <thead>
                   <tr>
-                    <th>
-                      <h4 className="table-title">CURRENT BALANCE</h4>
-                    </th>
-                    <th>
-                      <h4 className="table-title">TOTAL EARNED</h4>
-                    </th>
-                    <th>
-                      <h4 className="table-title">ANNUALIZED</h4>
-                    </th>
+                    <th><h4 className="table-title">CURRENT BALANCE</h4></th>
+                    <th><h4 className="table-title">TOTAL EARNED</h4></th>
+                    <th><h4 className="table-title">ANNUALIZED</h4></th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr style={{display: "none"}}>
-                    <td colSpan={3}>&nbsp;</td>
-                  </tr>
+                  <tr style={{display: "none"}}><td colSpan={3}>&nbsp;</td></tr>
                   {loading ? (
-                  <div className="loader-container">
-                      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-                  </div>
+                    <div className="loader-container"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
                   ) : (
-                      <>
-                        {sol.map((sol) => {
+                    <>
+                      {sol.map((sol) => {
                         const new_totalearned = sol.balance.toLocaleString("en-US", {maximumFractionDigits: 2,});
                         const new_balance = sol.total_earned.toLocaleString("en-US", {maximumFractionDigits: 2,});
-                          return (
-                              <tr>
-                                  <td className="table-balanceformat">
-                                      <p className="table-maincolor">{new_totalearned}</p>
-                                  </td>
-                                  <td className="table-balanceformat">
-                                      <p className="table-maincolor">{new_balance}</p>
-                                  </td>
-                                  <td className="table-balanceformat">
-                                      <p className="table-maincolor">{sol.apr}%</p>
-                                  </td>
-                              </tr>
-                          );
-                        })}
-                      </>
+                        return (
+                          <tr>
+                            <td className="table-balanceformat"><p className="table-maincolor">{new_totalearned}</p></td>
+                            <td className="table-balanceformat"><p className="table-maincolor">{new_balance}</p></td>
+                            <td className="table-balanceformat"><p className="table-maincolor">{sol.apr}%</p></td>
+                          </tr>
+                        );
+                      })}
+                    </>
                   )}
                 </tbody>
-                <tfoot>
-                  <tr>
-                    <td colSpan={3}>&nbsp;</td>
-                  </tr>
-                </tfoot>
+                <tfoot><tr><td colSpan={3}>&nbsp;</td></tr></tfoot>
               </table>
             </div>
           </Online>

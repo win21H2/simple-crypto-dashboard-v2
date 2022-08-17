@@ -5,113 +5,28 @@ $loading-color: #d74d3e;
 $cyan-color: #69f5e1;
 
 h3 {color: $primary-text-color;}
-.solanabeach {
-    &-card {width: 100%;}
-    &-wallet {border-radius: 20px;}
-    &-walletstyle {color: $cyan-color;}
-    &-notavailable {
-        color: $loading-color;
-        font-weight: bold;
-    }
-    &-wallet {
-        text-align: center;
-        background-color: $background-table-color;
-        box-shadow: rgb(0 0 0 / 20%) 0px 15px 30px 0px;
-        width: 90%;
-        margin: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    &-card td {
-        padding: 10px;
-        border: 0;
-    }
-}
-.table {
-    &-maincolor {color: $primary-text-color;}
-    &-balanceformat {width: 27%;}
-    &-stakerewardsformat {width: 25%;}
-    &-title {
-        font-size: 0.8rem;
-        color: $primary-text-color;
-    }
-}
 tr:nth-of-type(2n) {background-color: rgb(44, 44, 44);}
 table {border-spacing: 0;}
-thead {
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-}
-tfoot {
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
+thead {border-top-right-radius: 20px;border-top-left-radius: 20px}
+tfoot {border-bottom-right-radius: 20px;border-bottom-left-radius: 20px}
+.lds-ellipsis div:nth-child(1) {left: 8px; animation: lds-ellipsis1 0.6s infinite;}
+.lds-ellipsis div:nth-child(2) {left: 8px; animation: lds-ellipsis2 0.6s infinite;}
+.lds-ellipsis div:nth-child(3) {left: 32px; animation: lds-ellipsis2 0.6s infinite;}
+.lds-ellipsis div:nth-child(4) {left: 56px; animation: lds-ellipsis3 0.6s infinite;}
+@keyframes lds-ellipsis1 {0% {transform: scale(0);} 100% {transform: scale(1);}}
+@keyframes lds-ellipsis3 {0% {transform: scale(1);} 100% {transform: scale(0);}}
+@keyframes lds-ellipsis2 {0% {transform: translate(0, 0);} 100% {transform: translate(24px, 0);}}
+.table {&-maincolor {color: $primary-text-color;} &-balanceformat {width: 27%;} &-stakerewardsformat {width: 25%;} &-title {font-size: 0.8rem;color: $primary-text-color;}}
+.solanabeach {&-card {width: 100%;}&-wallet {border-radius: 20px;}&-walletstyle {color: $cyan-color;}&-notavailable {color: $loading-color;font-weight: bold;}&-wallet {text-align: center;background-color: $background-table-color;box-shadow: rgb(0 0 0 / 20%) 0px 15px 30px 0px;width: 90%;margin: auto;margin-top: 20px;margin-bottom: 20px;}&-card td {padding: 10px; border: 0;}}
+.lds-ellipsis {display: inline-block;position: relative;width: 80px;height: 80px;}
+.lds-ellipsis div {position: absolute;top: 33px;width: 13px;height: 13px;border-radius: 50%;background: #fff;animation-timing-function: cubic-bezier(0, 1, 1, 0);}
+
 .loader-container {
-    width: 89.3%;
-    height: 7%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    background: rgba(0, 0, 0, 0.834);
-    z-index: 1;
+  width: 88.5%;
+  height: 3%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
 }
-
-
-
-.lds-ellipsis {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
-  }
-  .lds-ellipsis div {
-    position: absolute;
-    top: 33px;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background: #fff;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
-  }
-  .lds-ellipsis div:nth-child(1) {
-    left: 8px;
-    animation: lds-ellipsis1 0.6s infinite;
-  }
-  .lds-ellipsis div:nth-child(2) {
-    left: 8px;
-    animation: lds-ellipsis2 0.6s infinite;
-  }
-  .lds-ellipsis div:nth-child(3) {
-    left: 32px;
-    animation: lds-ellipsis2 0.6s infinite;
-  }
-  .lds-ellipsis div:nth-child(4) {
-    left: 56px;
-    animation: lds-ellipsis3 0.6s infinite;
-  }
-  @keyframes lds-ellipsis1 {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  @keyframes lds-ellipsis3 {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-  }
-  @keyframes lds-ellipsis2 {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(24px, 0);
-    }
-  }
-  
